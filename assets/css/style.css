@@ -1928,6 +1928,7 @@ blockquote {
 	width: inherit;
 }
 #scrollUp {
+	visibility: hidden;         /* Supprimer cette ligne pour afficher le scrollUp */
 	position: absolute;
 	right: 50px;
 	bottom: 50px;
