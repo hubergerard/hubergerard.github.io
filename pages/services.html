@@ -15,24 +15,27 @@ title: Formations
             </div>
         </div>
         <div class="row">
+            {% for service in site.services %}
             <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
                 <div class="services-box">
-					<a href="/pages/angular">
-						<div class="services-img">
-							<img src="{{site.baseurl}}/assets/img/services/angular.png" class="img-fluid" alt="">
-						</div>
-					</a>
+                    {% if service.icon %}
+                    <div class="services-img">
+                        <img src="{{service.icon}}" class="img-fluid" alt="{{service.title}}">
+                    </div>
+                    {% endif %}
                     <div class="services-content">
                         <div class="card-title">
-                            <h5>Formation Angular</h5>
+                            <h5>{{service.title}}</h5>
                         </div>
-                        <div class="card-text">
-                            <p>Apprenez à créer des applications web dynamiques avec Angular !</p>
+						<div class="card-text">
+                            <p>{{service.short-description}}</p>
                         </div>
-                        <a href="/pages/angular" class="btn">Plus d'infos</a>
-                    </div>
-                </div>
+						<a href="{{service.url}}" class="btn">Plus d'infos</a>
+					</div>
+				</div>
             </div>
+            {% endfor %}
+
             <!-- <div class="col-xl-4 col-lg-4 col-md-6 mb-50 "> -->
                 <!-- <div class="services-box"> -->
                     <!-- <div class="services-img"> -->

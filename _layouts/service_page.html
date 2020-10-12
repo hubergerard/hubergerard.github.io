@@ -12,18 +12,16 @@ layout: default
                     <h2>{{page.title}}</h2>
                 </div>
             </div>
-		
 		</div>
-            <div class="col-xl-4 col-md-6 text-left text-md-right">
-                <div class="breadcrumb">
-                    <ul>
-                        <li><a href="{{site.url}}">Home</a></li>
-                        <li class="text-white pl-1">Pages /</li>
-                        <li class="text-white pl-1">{{page.title}}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+		<!-- <div class="col-xl-4 col-md-6 text-left text-md-right"> -->
+			<!-- <div class="breadcrumb"> -->
+				<!-- <ul> -->
+					<!-- <li><a href="{{site.url}}">Home</a></li> -->
+					<!-- <li class="text-white pl-1">Pages /</li> -->
+					<!-- <li class="text-white pl-1">{{page.title}}</li> -->
+				<!-- </ul> -->
+			<!-- </div> -->
+		<!-- </div> -->
 		
     </div>
 	
@@ -36,7 +34,87 @@ layout: default
 				 <img class="mb-30" src="{{page.image}}" alt="{{page.title}}">
 				{% endif %}
 			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			
+				<h1>Présentation du projet</h1>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="service-details mb-40">
+							<h2>Intitulé de la formation</h2>
+							<p>{{ page.title }} </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Présentation</h2>
+						<p>{{ page.description }}</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Durée</h2>
+						<p>{{ page.duration }}</p>
+						<p>{{ page.format }}</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Environnement de travail</h2>
+						<p>{{ page.environment }}</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Audience</h2>
+						<p>{{ page.target }}</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Tarif</h2>
+						<p>{{ page.price }} HT</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Objectifs pédagogiques</h2>
+						<ul>
+						{% for objective in page.objectives %}
+							<li> {{ objective }} </li>
+						{% endfor %}
+						</ul>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Contenu de la formation</h1>
+						
+						{% for chapter in page.syllabus %}
+							<h3> {{ chapter.title }} </h3>
+							<ul>
+							{% for subpart in chapter.subparts %}
+								<li>
+									{{ subpart }}
+								</li>
+							{% endfor %}
+							</ul>
+						{% endfor %}
+						
+					</div>
+				</div>
 			{{content}}
+			</div>
 
 		</div>
 	</div>
