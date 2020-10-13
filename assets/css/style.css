@@ -1972,11 +1972,11 @@ blockquote {
 }
 
 .mh-80 {
-	max-height: 140px;
+	max-height: calc(70px + 3vw);
 }
 
 .mw-80 {
-	max-width: 140px;
+	max-width: calc(70px + 3vw);
 }
 
 .icon-bg {
