@@ -4,118 +4,223 @@ layout: default
 {% include header.html %}
 <main> 
 <!-- breadcrumb-area -->
-<section class="breadcrumb-area grey-bg" style="background-image:url({{site.cover_image}})">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-8 col-md-6">
-                <div class="breadcrumb-title sm-size">
-                    <h2>{{page.title}}</h2>
-                </div>
-            </div>
-		</div>
-		<!-- <div class="col-xl-4 col-md-6 text-left text-md-right"> -->
-			<!-- <div class="breadcrumb"> -->
-				<!-- <ul> -->
-					<!-- <li><a href="{{site.url}}">Home</a></li> -->
-					<!-- <li class="text-white pl-1">Pages /</li> -->
-					<!-- <li class="text-white pl-1">{{page.title}}</li> -->
-				<!-- </ul> -->
-			<!-- </div> -->
-		<!-- </div> -->
-		
-    </div>
-	
-</section>
-	<div class="container mt-50">
-		<div class="row">
-			<div class="col-6 section-title mt-160"><h2>{{page.title}}</h2></div>
-			<div class="service-details mb-40 col-6">
-				{% if page.image %}
-				 <img class="mb-30" src="{{page.image}}" alt="{{page.title}}">
-				{% endif %}
+	<section class="breadcrumb-area grey-bg" style="background-image:url({{site.cover_image}})">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-xl-8 col-md-6">
+					<div class="breadcrumb-title sm-size">
+						<h2>{{page.title}}</h2>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-12">
+			<!-- <div class="col-xl-4 col-md-6 text-left text-md-right"> -->
+				<!-- <div class="breadcrumb"> -->
+					<!-- <ul> -->
+						<!-- <li><a href="{{site.url}}">Home</a></li> -->
+						<!-- <li class="text-white pl-1">Pages /</li> -->
+						<!-- <li class="text-white pl-1">{{page.title}}</li> -->
+					<!-- </ul> -->
+				<!-- </div> -->
+			<!-- </div> -->
 			
-				<h1>Présentation du projet</h1>
+		</div>
+		
+	</section>
+	<section id="title-section">
+		<div class="container mt-50">
 
+			<div class="row">
+				<div class="col-6 section-title mt-160 mb-30"><h2>{{page.title}}</h2></div>
+				<div class="service-details mb-40 col-6">
+					{% if page.image %}
+					 <img class="mb-20" src="{{page.image}}" alt="{{page.title}}">
+					{% endif %}
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section id="infos-formations">
+		<div class="container-fluid mb-60 pt-20 pb-20 infos-formations-bg text-center">
+			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="service-details mb-40">
-							<h2>Intitulé de la formation</h2>
-							<p>{{ page.title }} </p>
+					<div class="col-xs-12 col-lg m-3">
+						<div class="row">
+							<div class="col-4 align-self-center">
+								<img src="{{site.url}}/assets/img/icons/sur_mesure.svg" class="mw-80 mh-80 icon-bg"/>
+							</div>
+							<div class="col-8 align-self-center">
+								<h4> Une formation flexible 100% sur mesure </h4>
+
+								Démarrez à tout moment votre apprentissage ! Disponible à temps partiel ? Pas de problème, étudiez à votre rythme. 
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-lg m-3">
+						<div class="row">
+							<div class="col-4 align-self-center">
+								<img src="{{site.url}}/assets/img/icons/suivi_perso.svg" class="mw-80 mh-80 icon-bg"/>
+							</div>
+							<div class="col-8 align-self-center">
+								<div class="">
+								<h4> Un accompagnement personnalisé </h4>
+
+								Bénéficiez de sessions de coaching privé avec un expert du métier.
+								</div>
+								 
+							</div>
 						</div>
 					</div>
 				</div>
-
 				<div class="row">
-					<div class="col-md-12">
-						<h2>Présentation</h2>
-						<p>{{ page.description }}</p>
+					<div class="col-xs-12 col-lg m-3">
+						<div class="row">
+							<div class="col-4 align-self-center">
+								<img src="{{site.url}}/assets/img/icons/cours_professionalisant.svg" class="mw-80 mh-80 icon-bg"/>
+							</div>
+							<div class="col-8 align-self-center">
+								<h4> Une pédagogie adaptée aux professionels </h4>
+
+								20% de théorie. 80% d'exercices pratiques.
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-lg m-3">
+						<div class="row">
+							<div class="col-4 align-self-center">
+								<img src="{{site.url}}/assets/img/icons/ressources_a_emporter.svg" class="mw-80 mh-80 icon-bg"/>
+							</div>
+							<div class="col-8 align-self-center">
+								<h4> Des contenus complémentaires </h4>
+
+								Repartez avec tous les contenus de la formation, et des fiches-résumé ! 
+							</div>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+	<section id="description-formation">
+		<div class="container">
+			<div class="row flex-row-reverse">
+				<div class="col-xs-12 col-md-4 px-1">
+					<div class="sticky-top" style="top:11em">
+						<div class="row">
+							<div class="col-12 mb-50">
+								<div class="services-box">
+									{% if page.icon %}
+									<div class="services-img">
+										<img src="{{page.icon}}" class="img-fluid" alt="{{page.title}}">
+									</div>
+									{% endif %}
+									<div class="services-content">
+										<div class="card-title">
+											<h5>{{page.title}}</h5>
+										</div>
+										<div class="card-text mb-30">
+											<p>{{page.short-description}}</p>
+											<div class="row">
+												<div class="col-12">
+													<i class="fas fa-graduation-cap"></i> Formation qualifiante
+												</div>
+												<div class="col-12">
+													<i class="fas fa-user-friends"></i> Suivi personnalisé
+												</div>
+													<div class="col-12">
+													<i class="fas fa-briefcase"></i> Employabilité garantie
+												</div>
+											</div>
+										</div>
+										<a href="#" class="btn" style="white-space: normal;"> Télécharger le programme </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-8">
 				
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Durée</h2>
-						<p>{{ page.duration }}</p>
-						<p>{{ page.format }}</p>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Environnement de travail</h2>
-						<p>{{ page.environment }}</p>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Audience</h2>
-						<p>{{ page.target }}</p>
-					</div>
-				</div>
+					<h1 class="pb-20 font-weight-bold">Présentation du projet</h1>
 
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Tarif</h2>
-						<p>{{ page.price }} HT</p>
-					</div>
-				</div>
+					<!-- <div class="row"> -->
+						<!-- <div class="col-md-12"> -->
+							<!-- <div class="service-details mb-40"> -->
+								<!-- <h2>Intitulé de la formation</h2> -->
+								<!-- <p>{{ page.title }} </p> -->
+							<!-- </div> -->
+						<!-- </div> -->
+					<!-- </div> -->
 
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Objectifs pédagogiques</h2>
-						<ul>
-						{% for objective in page.objectives %}
-							<li> {{ objective }} </li>
-						{% endfor %}
-						</ul>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- <h4><b>Présentation</b></h4> -->
+							<p>{{ page.description }}</p>
+						</div>
 					</div>
-				</div>
+					
+					<div class="row">
+						<div class="col-md-12">
+							<h4><b>Durée</b></h4>
+							<p>{{ page.duration }}</p>
+							<p>{{ page.format }}</p>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12">
+							<h4><b>Environnement de travail</b></h4>
+							<p>{{ page.environment }}</p>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12">
+							<h4><b>À qui s'adresse cette formation ?</b></h4>
+							<p>{{ page.target }}</p>
+						</div>
+					</div>
 
-				<div class="row">
-					<div class="col-md-12">
-						<h1>Contenu de la formation</h1>
-						
-						{% for chapter in page.syllabus %}
-							<h3> {{ chapter.title }} </h3>
+					<div class="row">
+						<div class="col-md-12">
+							<h4><b>Tarif</b></h4>
+							<p>{{ page.price }} HT</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<h4><b>Compétences acquises grâce à cette formation</b></h4>
 							<ul>
-							{% for subpart in chapter.subparts %}
-								<li>
-									{{ subpart }}
-								</li>
+							{% for objective in page.objectives %}
+								<li style="list-style: disc; list-style-position: inside;"> {{ objective }} </li>
 							{% endfor %}
 							</ul>
-						{% endfor %}
-						
+						</div>
 					</div>
+<hr/>
+					<div class="row mt-30 mb-40">
+						<div class="col-md-12">
+							<h1 class="font-weight-bold">Contenu de la formation</h1>
+							
+							{% for chapter in page.syllabus %}
+								<h4 class="pt-25"> <b>{{ chapter.title }}</b> </h4>
+								<ul>
+								{% for subpart in chapter.subparts %}
+									<li style="list-style: disc; list-style-position: inside;">
+										{{ subpart }}
+									</li>
+								{% endfor %}
+								</ul>
+							{% endfor %}
+							
+						</div>
+					</div>
+				{{content}}
 				</div>
-			{{content}}
+				
 			</div>
-
 		</div>
-	</div>
+	</section>
+		
 </main>
