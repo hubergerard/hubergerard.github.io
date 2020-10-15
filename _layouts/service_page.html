@@ -132,7 +132,9 @@ layout: default
 												</div>
 											</div>
 										</div>
+										{% if page.file-path %}
 										<a class="btn" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
+										{% endif %}
 									</div>
 								</div>
 							</div>
