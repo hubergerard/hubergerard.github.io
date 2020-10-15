@@ -29,8 +29,30 @@ sitemap:
     </url>
     {% endunless %}
   {% endfor %}
+  {% for service in site.services %}
+    <url>
+      <loc>{{ site.url }}{{ service.url }}</loc>
+      {% if service.sitemap.lastmod %}
+        <lastmod>{{ service.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+      {% elsif service.date %}
+        <lastmod>{{ service.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ service.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      {% if service.sitemap.changefreq %}
+        <changefreq>{{ service.sitemap.changefreq }}</changefreq>
+      {% else %}
+        <changefreq>monthly</changefreq>
+      {% endif %}
+      {% if service.sitemap.priority %}
+        <priority>{{ service.sitemap.priority }}</priority>
+      {% else %}
+        <priority>0.7</priority>
+      {% endif %}
+    </url>
+  {% endfor %}
   {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name == "feed.xml" %}
+    {% unless page.sitemap.exclude == "yes" or page.name == "feed.xml" or page.url == "/assets/main.css" or page.url == "/index.xml" %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       {% if page.sitemap.lastmod %}
