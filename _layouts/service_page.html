@@ -6,15 +6,15 @@ layout: default
 {
 	"@context": "https://schema.org",
 	"@type": "Course",
-	"name": "Introduction to Computer Science and Programming",
-	"description": "Introductory CS course laying out the basics.",
+	"name": "{{page.title}}",
+	"description": "{{page.description}}",
 	"provider": {
-		"@type": "Organization",
-		"name": "University of Technology - Eureka",
-		"sameAs": "http://www.ut-eureka.edu"
+		"@type": "Company",
+		"name": "{{site.title}}",
+		"sameAs": "{{site.url}}"
 	},
-	"coursePrerequisites": "{{page.target}}",
-	"assesses": "{{page.objectives | join: ","}}",
+	"coursePrerequisites": "{{page.target | escape}}",
+	"assesses": "{{page.objectives | join: "," | escape}}",
 	"educationalLevel": "{{page.educational-level}}"
 }
 </script>
