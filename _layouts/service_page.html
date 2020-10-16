@@ -18,7 +18,7 @@ layout: default
 		"@type": "Person",
 		"name": "{{site.author}}"
 	},
-	"teaches": "{{page.objectives | join: "," | escape}}",
+	"teaches": "{{page.objectives | join: ", " | escape}}",
 	"educationalLevel": "{{page.educational-level}}",
 	"image": "{{site.url}}{{page.icon}}"
 }
