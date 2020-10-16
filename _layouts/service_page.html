@@ -2,6 +2,13 @@
 layout: default
 ---
 {% include header.html %}
+<script type="application/ld+json">
+{
+	"coursePrerequisites": {{page.target}},
+	"assesses": {{page.objectives | join: ","}},
+	"educationalLevel": {{page.educational-level}}
+}
+</script>
 <main> 
 <!-- breadcrumb-area -->
 	<section class="breadcrumb-area grey-bg" style="background-image:url({{site.cover_image}})">
