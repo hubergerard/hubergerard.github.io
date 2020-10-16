@@ -4,6 +4,15 @@ layout: default
 {% include header.html %}
 <script type="application/ld+json">
 {
+	"@context": "https://schema.org",
+	"@type": "Course",
+	"name": "Introduction to Computer Science and Programming",
+	"description": "Introductory CS course laying out the basics.",
+	"provider": {
+		"@type": "Organization",
+		"name": "University of Technology - Eureka",
+		"sameAs": "http://www.ut-eureka.edu"
+	},
 	"coursePrerequisites": "{{page.target}}",
 	"assesses": "{{page.objectives | join: ","}}",
 	"educationalLevel": "{{page.educational-level}}"
