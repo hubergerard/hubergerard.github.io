@@ -13,9 +13,14 @@ layout: default
 		"name": "{{site.title}}",
 		"sameAs": "{{site.url}}"
 	},
-	"coursePrerequisites": "{{page.target | escape}}",
-	"assesses": "{{page.objectives | join: "," | escape}}",
-	"educationalLevel": "{{page.educational-level}}"
+	"audience": "{{page.target | escape}}",
+	"author": {
+		"@type": "Person",
+		"name": "{{site.author}}"
+	}
+	"teaches": "{{page.objectives | join: "," | escape}}",
+	"educationalLevel": "{{page.educational-level}}",
+	"image": {{page.icon}}
 }
 </script>
 <main> 
