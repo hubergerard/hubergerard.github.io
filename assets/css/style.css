@@ -2015,4 +2015,16 @@ blockquote {
 	z-index: 10000;
 	overflow: auto;
 	overflow-y: auto;
- }
+}
+
+.modal-header {
+	background-color: #1f7ed8;
+}
+
+.modal-title {
+	color: white !important;
+}
+
+.img-tel {
+	height: 50px;
+}
