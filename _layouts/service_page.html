@@ -153,11 +153,34 @@ layout: default
 												</div>
 											</div>
 										</div>
-										{% if page.file-path %}
-										<a class="btn" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
-										{% endif %}
+										<div>
+											{% if page.file-path %}
+											<a class="btn mb-1" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
+											{% endif %}
+											<a class="btn-blue" data-toggle="modal" data-target="#contactModal" style="white-space: normal;"> Réserver la formation </a>	
+										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+  
+				<!-- Modal -->
+				<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="contactModalLabel">Réservez votre formation</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								Pour cela, contactez-nous ! Nous pourrons répondre à vos questions et vous inscrire à la prochaine session de formation.
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
