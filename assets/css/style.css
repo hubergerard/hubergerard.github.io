@@ -193,9 +193,33 @@ label {
 	vertical-align: middle;
 	white-space: nowrap;
 }
+
 .btn:hover{
 	color: #fff;
 }
+
+.btn-blue {
+	-moz-user-select: none;
+	background: #1f7ed8;
+	border: medium none;
+	border-radius: 0;
+	color: #fff !important;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 12px 15px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
 .btn-off {
 	-moz-user-select: none;
 	background: transparent;
@@ -1984,4 +2008,23 @@ blockquote {
     width: 300px;
     height: 300px; 
 	background:white;
+}
+
+.modal {
+	margin-top: 200px;
+	z-index: 10000;
+	overflow: auto;
+	overflow-y: auto;
+}
+
+.modal-header {
+	background-color: #1f7ed8;
+}
+
+.modal-title {
+	color: white !important;
+}
+
+.img-tel {
+	height: 50px;
 }
