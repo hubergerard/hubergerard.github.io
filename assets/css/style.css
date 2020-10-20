@@ -220,6 +220,10 @@ label {
 	white-space: nowrap;
 }
 
+.btn-blue:hover{
+	color: #fff;
+}
+
 .btn-off {
 	-moz-user-select: none;
 	background: transparent;
@@ -879,7 +883,20 @@ label {
 	background: none;
 	color: #1f7ed8;
 }
+.services-box a.btn-blue {
+	padding: 11px 15px;
+	font-size: 13px;
+	transition: all .5s;
+	border: 1px solid #1f7ed8;
+	background: #1f7ed8;
+	color: white;
+}
 .services-box a.btn:hover {
+	background: #000;
+	border: 1px solid #000;
+	color: #fff;
+}
+.services-box a.btn-blue:hover {
 	background: #000;
 	border: 1px solid #000;
 	color: #fff;
