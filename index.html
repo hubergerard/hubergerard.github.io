@@ -3,14 +3,21 @@ layout: default
 ---
 {% include header.html %}
 <main>
-    <!-- {% include slider.html %} -->
+	{% comment %}
+    {% include slider.html %}
+	{% endcomment %}
+	
 	{% include call_to_action.html %}	
     {% include services.html %}
 	{% include about.html %}
     {% include countdown.html %}
-    <!-- {% include portfolios.html %} -->
-    <!-- {% include testimonials.html %} -->
-    <!-- {% include team_members.html %} -->
-    <!-- {% include blog_area.html %} -->
+	
+	{% comment %}
+    {% include portfolios.html %}
+    {% include testimonials.html %}
+    {% include team_members.html %}
+    {% include blog_area.html %}
+	{% endcomment %}
+	
     {% include clients.html %}
 </main>
