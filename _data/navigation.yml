@@ -6,7 +6,7 @@
   url: /pages/services
 - text: Qui sommes-nous ?
   url: /pages/about
-# - text: Blog
-   # url: /pages/blog
+- text: Blog
+  url: /pages/blog
 - text: Contact
   url: /pages/contact

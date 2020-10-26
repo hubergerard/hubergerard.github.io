@@ -123,10 +123,10 @@ layout: default
 		</div>
 	</section>
 	<section id="description-formation">
-		<div class="container">
+		<div class="container mb-20">
 			<div class="row flex-row-reverse">
 				<div class="col-xs-12 col-md-4 px-1">
-					<div class="sticky-top" style="top:11em">
+					<div class="sticky-top mt-10" style="top:11.5em">
 						<div class="row">
 							<div class="col-12 mb-50">
 								<div class="services-box">
@@ -189,7 +189,7 @@ layout: default
 				</div>
 				<div class="col-xs-12 col-md-8">
 				
-					<h1 class="pb-20 font-weight-bold">Présentation de la formation</h1>
+					<h1 class="font-weight-bold">Présentation de la formation</h1>
 
 
 					<div class="row">
@@ -233,22 +233,22 @@ layout: default
 						</div>
 					</div>
 					
-					<div class="row mt-15">
+					<div class="row">
 						<div class="col-md-12">
 							<h4><b>Tarif</b></h4>
 							<p>{{ page.price }} HT</p>
 						</div>
 					</div>
 					<hr/>
-					<div class="row mt-30 mb-40">
+					<div class="row">
 						<div class="col-md-12">
 							<h1 class="font-weight-bold">Contenu de la formation</h1>
 							
 							{% for chapter in page.syllabus %}
 								{% if chapter.bigtitle %}
-									<h3 class="mt-35 font-weight-bold">{{ chapter.bigtitle }}</h3>
+									<h3 class="mt-5 font-weight-bold">{{ chapter.bigtitle }}</h3>
 								{% endif %}
-								<h4 class="pt-25"> <b>{{ chapter.title }}</b> </h4>
+								<h4> <b>{{ chapter.title }}</b> </h4>
 								<ul>
 								{% for subpart in chapter.subparts %}
 									<li style="list-style: disc; list-style-position: inside;">
