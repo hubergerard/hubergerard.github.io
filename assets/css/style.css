@@ -27,7 +27,7 @@
 /* 1. Theme default css */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
  body {
-	font-family: 'Poppins', 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 14px;
@@ -129,6 +129,7 @@ li {
 	list-style: none
 }
 p {
+	font-family: 'Poppins', 'Open Sans', sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 26px;
@@ -173,6 +174,7 @@ label {
 /* button style */
 
 .btn {
+	font-family: 'Open Sans';
 	-moz-user-select: none;
 	background: #1f7ed8;
 	border: medium none;
@@ -199,6 +201,7 @@ label {
 }
 
 .btn-blue {
+	font-family: 'Open Sans';
 	-moz-user-select: none;
 	background: #1f7ed8;
 	border: medium none;
@@ -225,6 +228,7 @@ label {
 }
 
 .btn-off {
+	font-family: 'Open Sans';
 	-moz-user-select: none;
 	background: transparent;
 	border: medium none;
