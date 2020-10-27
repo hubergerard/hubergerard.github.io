@@ -926,6 +926,10 @@ label {
 	font-size: 1rem;
 }
 
+#description-formation table {
+	margin-bottom: 28px;
+}
+
 /* services-active */
 .services-active .slick-arrow {
 	position: absolute;
