@@ -926,6 +926,10 @@ label {
 	font-size: 1rem;
 }
 
+#description-formation table {
+	margin-bottom: 28px;
+}
+
 /* services-active */
 .services-active .slick-arrow {
 	position: absolute;
@@ -2095,4 +2099,8 @@ blockquote {
 .blog-content p {
 	margin-bottom: 28px;
 	font-size: 1rem;
+}
+
+.max-height-25 {
+	max-height: 25px;
 }
