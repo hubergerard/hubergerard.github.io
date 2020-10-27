@@ -4,14 +4,14 @@ title: Contact
 ---
 
 <!-- contact-area -->
-<section class="contact-area pb-70 pt-100">
+<section id="contact-area" class="contact-area pb-50 pt-120">
     <div class="container">
         <div class="row">
             <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
                 <div class="contact-person">
                     <h4>Rencontrez-nous</h4>
-                    <p>Venez échanger avec nous dans nos locaux toulousains!</p>
-                    <div class="blue-as-a-link"><i class="far fa-calendar-alt pr-2"></i>Lun - Ven | de 9h00 à 18h00</div>
+                    <p>Venez échanger avec nous dans <span class="blue-as-a-link" onclick="toggleMapVisibility()">nos locaux toulousains!</span></p>
+                    <div class="blue-as-a-link" onclick="toggleMapVisibility()"><i class="far fa-calendar-alt pr-2"></i>Lun - Ven | de 9h00 à 18h00</div>
                 </div>
             </div>
             <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
@@ -25,24 +25,24 @@ title: Contact
                 <div class="contact-person">
                     <h4>Ecrivez-nous</h4>
                     <p>Réponse sous 24h.</p>
-                    <a href="mailto:huber.gerard1@gmail.com?subject="Demande d'informations"><i class="far fa-envelope pr-2"></i>huber.gerard1@gmail.com</a>
+                    <a href="mailto:huber.gerard1@gmail.com?subject='Demande d\'informations'"><i class="far fa-envelope pr-2"></i>huber.gerard1@gmail.com</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- contact-maps -->
-<!-- <div class="maps-area"> -->
-    <!-- <div class="container"> -->
-        <!-- <div class="row"> -->
-            <!-- <div class="col-12"> -->
-                <!-- <div class="maps"> -->
-                    <!-- <a href="#"><img src="/assets/img/map.png" class="img-fluid" alt=""></a> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </div> -->
+<div id="map" class="maps-area mb-50 opacity transition" style="transition: opacity 1s;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="maps">
+                    <img src="/assets/img/contact/codewise-map.jpg" class="img-fluid" alt="Emplacement CodeWise"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- contact-form -->
 <section class="contact-form pb-100">
     <div class="container">
@@ -80,3 +80,24 @@ title: Contact
         </div>
     </div>
 </section>
+
+<script>
+function toggleMapVisibility() {
+	const mapDom = document.getElementById('map');
+	if (mapDom.getAttribute('hidden') !== '') {
+		setTimeout(() => {
+			mapDom.style.opacity = 0;
+		}, 1);
+		setTimeout(() => {
+			mapDom.setAttribute('hidden', '');
+		}, 1000);
+	} else {
+		setTimeout(() => {
+			mapDom.style.opacity = 1;
+		}, 50);
+		setTimeout(() => {
+			mapDom.removeAttribute('hidden');
+		}, 1);
+	}
+}
+</script>
