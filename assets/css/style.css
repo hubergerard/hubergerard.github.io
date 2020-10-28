@@ -2078,3 +2078,12 @@ blockquote {
 	opacity: 0;
 	transition: opacity 0.5s;
 }
+/* ----- BLOG SECTION ----- */
+
+.max-height-25 {
+	max-height: 25px;
+}
+
+.mh-80-px {
+	max-height: 80px;
+}
