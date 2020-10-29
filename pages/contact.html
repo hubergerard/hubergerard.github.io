@@ -32,7 +32,7 @@ title: Contact
     </div>
 </section>
 <!-- contact-maps -->
-<div id="map" class="maps-area mb-50 opacity transition" style="transition: opacity 1s;">
+<div id="map" class="maps-area mb-50 opacity map-transition" hidden>
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -90,7 +90,7 @@ function toggleMapVisibility() {
 		}, 1);
 		setTimeout(() => {
 			mapDom.setAttribute('hidden', '');
-		}, 1000);
+		}, 500);
 	} else {
 		setTimeout(() => {
 			mapDom.style.opacity = 1;
