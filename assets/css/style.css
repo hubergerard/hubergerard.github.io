@@ -2074,6 +2074,18 @@ blockquote {
 	height: 50px;
 }
 
+.max-height-25 {
+	max-height: 25px;
+}
+
+.mh-80-px {
+	max-height: 80px;
+}
+
+.mh-26-px {
+	max-height: 26px;
+}
+
 .map-transition {
 	opacity: 0;
 	transition: opacity 0.5s;
