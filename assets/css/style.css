@@ -1820,7 +1820,11 @@ label {
 	text-transform: uppercase;
 	margin: 5px;
 }
-.sidebar-tad  a:hover{background:#1f7ed8;color:#fff}
+.sidebar-tad a:hover{
+	background:#1f7ed8;
+	color:#fff;
+}
+
 /* blog column */
 .blog-column .blog-title {
   font-size: 18px;
@@ -1965,7 +1969,7 @@ blockquote {
 }
 .pagination ul > li > a,
 .pagination ul > li > span {
-    float: none
+    float: none;
 }
 .pagination ul > li > a {
 	background: #FFF;
