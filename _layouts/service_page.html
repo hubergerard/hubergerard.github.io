@@ -166,7 +166,7 @@ layout: default
 					</div>
 				</div>
   
-				<!-- Modal -->
+				<!-- Modal Reservez votre formation -->
 				<div class="modal fade mt-50 mt-md-200" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
@@ -178,6 +178,29 @@ layout: default
 							</div>
 							<div class="modal-body text-center">
 								<p>Pour cela, contactez-nous ! Nous pourrons répondre à vos questions et vous inscrire à la prochaine session de formation.</p>
+								<img class="img-tel" src="/assets/img/services/numero_tel.png"/>
+								<p>Ou par mail : huber.gerard1@gmail.com</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+  
+				<!-- Modal Besoin d'aide ? -->
+				<div class="modal fade mt-50 mt-md-200" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="helpModalLabel">Besoin d'aide ?</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body text-center">
+								<p>Vous êtes sur cette page depuis plus de 2 minutes !</p>
+								<p> Contactez-nous pour recevoir gratuitement l'aide de nos conseillers.</p>
 								<img class="img-tel" src="/assets/img/services/numero_tel.png"/>
 								<p>Ou par mail : huber.gerard1@gmail.com</p>
 							</div>
@@ -268,5 +291,9 @@ layout: default
 			</div>
 		</div>
 	</section>
-		
+	<script>
+		setTimeout(function() {
+			$('#helpModal').modal();
+		}, 120000);
+	</script>
 </main>
