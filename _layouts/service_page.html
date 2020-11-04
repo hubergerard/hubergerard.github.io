@@ -49,14 +49,14 @@ layout: default
 	</section>
 	<section id="title-section">
 		<div class="container mt-50">
-
-			<div class="row">
-				<div class="col-6 section-title mt-160 mb-30"><h2>{{page.title}}</h2></div>
-				<div class="service-details mb-40 col-6">
+			<div class="row flex-row-reverse">
+				<div class="service-details mb-40 col-12 col-md-6">
 					{% if page.image %}
-					 <img class="mb-20" src="{{page.image}}" alt="{{page.title}}">
+					<img class="mb-20" src="{{page.image}}" alt="{{page.title}}">
 					{% endif %}
 				</div>
+				<div class="col-12 col-md-6 section-title mt-40 mb-60 mt-md-auto mb-md-auto"><h2>{{page.title}}</h2></div>
+				
 			</div>
 
 		</div>
