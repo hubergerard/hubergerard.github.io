@@ -3,15 +3,62 @@ layout: page
 title: Contact
 ---
 
+<!-- contact-form -->
+<section class="contact-form pt-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="contact-form-title">
+                    <h2>Contactez-nous !</h2>
+                    <p>Nous recevrons directement ce message sur notre adresse email. Réponse garantie en 24h !</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form id="contact-form" action="https://formspree.io/f/xaylqpdg" class="contact-form" method="POST">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="name" name="name" type="text" placeholder="Nom">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="company" name="company" type="text" placeholder="Entreprise">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="website" name="website" type="text" placeholder="Site Web">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="email" name="email" type="email" placeholder="Email*">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="phone" name="phone" type="text" placeholder="Téléphone*">
+                        </div>
+                        <div class="col-xl-12 mb-20">
+                            <input class="subject" name="subject" type="text" placeholder="Objet*">
+                        </div>
+                        <div class="col-xl-12 mb-20">
+                            <textarea class="message" name="message" id="text-message" cols="30" rows="10" placeholder="Message*"></textarea>
+                        </div>
+                        <div class="col-xl-12 text-center">
+                            <button class="btn submit" type="submit">Envoyer le message</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="ajax-response"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- contact-area -->
-<section id="contact-area" class="contact-area pb-50 pt-120">
+<section id="contact-area" class="contact-area pt-50 pb-80">
     <div class="container">
         <div class="row">
             <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
                 <div class="contact-person">
                     <h4>Rencontrez-nous</h4>
-                    <p>Venez échanger avec nous dans <span class="blue-as-a-link" onclick="toggleMapVisibility()">nos locaux toulousains!</span></p>
-                    <div class="blue-as-a-link" onclick="toggleMapVisibility()"><i class="far fa-calendar-alt pr-2"></i>Lun - Ven | de 9h00 à 18h00</div>
+                    <p>Venez échanger avec nous dans <span class="blue-as-a-link pointer-cursor" onclick="toggleMapVisibility()">nos locaux toulousains!</span></p>
+                    <div class="blue-as-a-link pointer-cursor" onclick="toggleMapVisibility()"><i class="far fa-calendar-alt pr-2"></i>Lun - Ven | de 9h00 à 18h00</div>
                 </div>
             </div>
             <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
@@ -32,7 +79,7 @@ title: Contact
     </div>
 </section>
 <!-- contact-maps -->
-<div id="map" class="maps-area mb-50 opacity map-transition" hidden>
+<div id="map" class="maps-area mb-80 opacity map-transition" hidden>
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -43,44 +90,6 @@ title: Contact
         </div>
     </div>
 </div>
-<!-- contact-form -->
-<section class="contact-form pb-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="contact-form-title">
-                    <h2>Contactez-nous !</h2>
-                    <p>Nous recevrons directement ce message sur notre adresse email. Réponse garantie en 24h !</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <form id="contact-form" action="https://formspree.io/f/xaylqpdg" class="contact-form" method="POST">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 mb-20">
-                            <input name="name" type="text" placeholder="Nom">
-                        </div>
-                        <div class="col-xl-6 col-lg-6 mb-20">
-                            <input name="email" type="email" placeholder="Email">
-                        </div>
-                        <div class="col-xl-12 mb-20">
-                            <input name="subject" type="text" placeholder="Objet">
-                        </div>
-                        <div class="col-xl-12 mb-20">
-                            <textarea name="message" id="text-message" cols="30" rows="10" placeholder="Message*"></textarea>
-                        </div>
-                        <div class="col-xl-12 text-center">
-                            <button class="btn" type="submit">Envoyer le message</button>
-                        </div>
-                    </div>
-                </form>
-                <p class="ajax-response"></p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <script>
 function toggleMapVisibility() {
 	const mapDom = document.getElementById('map');
@@ -99,5 +108,22 @@ function toggleMapVisibility() {
 			mapDom.removeAttribute('hidden');
 		}, 1);
 	}
+}
+
+const disableSubmitWhenInvalidForm = () => {
+    if(!isFormValid()){
+        $('.submit').prop('disabled', true);    
+    }else{
+        $('.submit').prop('disabled', false);   
+    }
+};
+
+$('.subject,.message,.phone,.email').on('keyup', disableSubmitWhenInvalidForm);
+
+const isFormValid = () => {
+    return $('.subject').val().length!= 0 
+		&& $('.message').val().length != 0
+		&& $('.phone').val().length != 0
+		&& $('.email').val().length != 0;
 }
 </script>

@@ -2094,7 +2094,6 @@ blockquote {
 	opacity: 0;
 	transition: opacity 0.5s;
 }
-/* ----- BLOG SECTION ----- */
 
 .max-height-25 {
 	max-height: 25px;
@@ -2106,4 +2105,8 @@ blockquote {
 
 .mh-26-px {
 	max-height: 26px;
+}
+
+.pointer-cursor {
+	cursor: pointer;
 }
