@@ -28,10 +28,10 @@ title: Contact
                             <input class="website" name="website" type="text" placeholder="Site Web">
                         </div>
                         <div class="col-xl-6 col-lg-6 mb-20">
-                            <input class="email" name="email" type="email" placeholder="Email*">
-                        </div>
-                        <div class="col-xl-6 col-lg-6 mb-20">
                             <input class="phone" name="phone" type="text" placeholder="Téléphone*">
+                        </div>
+						<div class="col-xl-12 mb-20">
+                            <input class="email" name="email" type="email" placeholder="Email*">
                         </div>
                         <div class="col-xl-12 mb-20">
                             <input class="subject" name="subject" type="text" placeholder="Objet*">
@@ -58,7 +58,12 @@ title: Contact
                 <div class="contact-person">
                     <h4>Rencontrez-nous</h4>
                     <p>Venez échanger avec nous dans <span class="blue-as-a-link pointer-cursor" onclick="toggleMapVisibility()">nos locaux toulousains!</span></p>
-                    <div class="blue-as-a-link pointer-cursor" onclick="toggleMapVisibility()"><i class="far fa-calendar-alt pr-2"></i>Lun - Ven | de 9h00 à 18h00</div>
+                    <div>
+						<span class="blue-as-a-link pointer-cursor" onclick="toggleMapVisibility()">
+							<i class="far fa-calendar-alt pr-2"></i>
+							Lun - Ven | de 9h00 à 18h00
+						</span>
+					</div>
                 </div>
             </div>
             <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
@@ -91,39 +96,52 @@ title: Contact
     </div>
 </div>
 <script>
-function toggleMapVisibility() {
+
+const HIDDEN_VALUE = ''; // should stay at value ''
+
+$(document).ready(() => {
+	$('.subject,.message,.phone,.email').on('keyup', disableSubmitWhenInvalidForm);
+});
+
+const toggleMapVisibility = () => {
 	const mapDom = document.getElementById('map');
-	if (mapDom.getAttribute('hidden') !== '') {
-		setTimeout(() => {
-			mapDom.style.opacity = 0;
-		}, 1);
-		setTimeout(() => {
-			mapDom.setAttribute('hidden', '');
-		}, 500);
+	if (isVisible(mapDom)) {
+		hideTransition(mapDom);
 	} else {
-		setTimeout(() => {
-			mapDom.style.opacity = 1;
-		}, 50);
-		setTimeout(() => {
-			mapDom.removeAttribute('hidden');
-		}, 1);
+		unhideTransition(mapDom);
 	}
 }
-
-const disableSubmitWhenInvalidForm = () => {
-    if(!isFormValid()){
-        $('.submit').prop('disabled', true);    
-    }else{
-        $('.submit').prop('disabled', false);   
-    }
-};
-
-$('.subject,.message,.phone,.email').on('keyup', disableSubmitWhenInvalidForm);
 
 const isFormValid = () => {
     return $('.subject').val().length!= 0 
 		&& $('.message').val().length != 0
 		&& $('.phone').val().length != 0
 		&& $('.email').val().length != 0;
+}
+
+const hideTransition = (domElement) => {
+	setTimeout(() => {
+		domElement.style.opacity = 0;
+	}, 1);
+	setTimeout(() => {
+		domElement.setAttribute('hidden', HIDDEN_VALUE);
+	}, 500);
+}
+
+const unhideTransition = (domElement) => {
+	setTimeout(() => {
+		domElement.style.opacity = 1;
+	}, 50);
+	setTimeout(() => {
+		domElement.removeAttribute('hidden');
+	}, 1);
+}
+
+const disableSubmitWhenInvalidForm = () => {
+	$('.submit').prop('disabled', !isFormValid());    
+};
+
+const isVisible = (domElement) => {
+	return domElement.getAttribute('hidden') !== HIDDEN_VALUE;
 }
 </script>

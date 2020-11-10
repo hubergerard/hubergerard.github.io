@@ -177,9 +177,9 @@ layout: default
 								</button>
 							</div>
 							<div class="modal-body text-center">
-								<p>Pour cela, contactez-nous ! Nous pourrons répondre à vos questions et vous inscrire à la prochaine session de formation.</p>
+								<p>Contactez-nous <a href="/pages/contact">ici</a> pour réserver votre formation.</p>
+								<p>Ou bien directement au téléphone. </p>
 								<img class="img-tel" src="/assets/img/services/contact.png"/>
-								
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -200,7 +200,8 @@ layout: default
 							</div>
 							<div class="modal-body text-center">
 								<p>Vous êtes sur cette page depuis plus de 2 minutes !</p>
-								<p> Contactez-nous pour recevoir gratuitement l'aide de nos conseillers.</p>
+								<p> Contactez-nous <a href="/pages/contact">ici</a> pour recevoir gratuitement l'aide de nos conseillers.</p>
+								<p> Ou bien directement au téléphone.</p>
 								<img class="img-tel" src="/assets/img/services/contact.png"/>
 								
 							</div>
@@ -293,7 +294,9 @@ layout: default
 	</section>
 	<script>
 		setTimeout(function() {
-			$('#helpModal').modal();
+			if (!$('#contactModal').hasClass('in')) {
+				$('#helpModal').modal();
+			}
 		}, 120000);
 	</script>
 </main>
