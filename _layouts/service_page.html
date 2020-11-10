@@ -49,14 +49,14 @@ layout: default
 	</section>
 	<section id="title-section">
 		<div class="container mt-50">
-
-			<div class="row">
-				<div class="col-6 section-title mt-160 mb-30"><h2>{{page.title}}</h2></div>
-				<div class="service-details mb-40 col-6">
+			<div class="row flex-row-reverse">
+				<div class="service-details mb-40 col-12 col-md-6">
 					{% if page.image %}
-					 <img class="mb-20" src="{{page.image}}" alt="{{page.title}}">
+					<img class="mb-20" src="{{page.image}}" alt="{{page.title}}">
 					{% endif %}
 				</div>
+				<div class="col-12 col-md-6 section-title mt-40 mb-60 mt-md-auto mb-md-auto"><h2>{{page.title}}</h2></div>
+				
 			</div>
 
 		</div>
@@ -178,8 +178,8 @@ layout: default
 							</div>
 							<div class="modal-body text-center">
 								<p>Pour cela, contactez-nous ! Nous pourrons répondre à vos questions et vous inscrire à la prochaine session de formation.</p>
-								<img class="img-tel" src="/assets/img/services/numero_tel.png"/>
-								<p>Ou par mail : huber.gerard1@gmail.com</p>
+								<img class="img-tel" src="/assets/img/services/contact.png"/>
+								
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -201,8 +201,8 @@ layout: default
 							<div class="modal-body text-center">
 								<p>Vous êtes sur cette page depuis plus de 2 minutes !</p>
 								<p> Contactez-nous pour recevoir gratuitement l'aide de nos conseillers.</p>
-								<img class="img-tel" src="/assets/img/services/numero_tel.png"/>
-								<p>Ou par mail : huber.gerard1@gmail.com</p>
+								<img class="img-tel" src="/assets/img/services/contact.png"/>
+								
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

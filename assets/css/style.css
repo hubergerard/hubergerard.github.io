@@ -2075,7 +2075,7 @@ blockquote {
 }
 
 .img-tel {
-	height: 50px;
+	height: 80px;
 }
 
 .max-height-25 {
@@ -2106,7 +2106,10 @@ blockquote {
 .mh-26-px {
 	max-height: 26px;
 }
+<<<<<<< HEAD
 
 .pointer-cursor {
 	cursor: pointer;
 }
+=======
+>>>>>>> 5cb91f7487668d9be828ed80b56bc2b48079898b
