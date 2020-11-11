@@ -2110,3 +2110,7 @@ blockquote {
 .pointer-cursor {
 	cursor: pointer;
 }
+
+.guide {
+	margin: 0;
+}
