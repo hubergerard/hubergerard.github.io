@@ -125,14 +125,15 @@ layout: default
 	<section id="description-formation">
 		<div class="container mb-20">
 			<div class="row flex-row-reverse">
-				<div class="col-xs-12 col-md-4 px-1">
+				<!-- Sticky "Reservez" -->
+				<div class="col-xs-12 col-md-4">
 					<div class="sticky-top mt-10" style="top:11.5em">
 						<div class="row">
 							<div class="col-12 mb-50">
 								<div class="services-box">
 									{% if page.icon %}
 									<div class="services-img">
-										<img src="{{page.icon}}" class="img-fluid" alt="{{page.title}}">
+										<img src="{{page.icon}}" alt="{{page.title}}" class="img-fluid">
 									</div>
 									{% endif %}
 									<div class="services-content">
@@ -155,7 +156,7 @@ layout: default
 										</div>
 										<div>
 											{% if page.file-path %}
-											<a class="btn mb-1" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
+											<a class="btn mb-2" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
 											{% endif %}
 											<a class="btn-blue" data-toggle="modal" data-target="#contactModal" style="white-space: normal;"> Réserver la formation </a>	
 										</div>
