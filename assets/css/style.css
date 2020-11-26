@@ -159,6 +159,10 @@ label {
 	font-weight: 400;
 }
 
+code {
+    font-size: 100%;
+}
+
 ::-moz-selection {
 	background: #444;
 	color: #fff;
