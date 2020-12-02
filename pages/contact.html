@@ -58,11 +58,6 @@ title: Contact
 
     const HIDDEN_VALUE = ''; // should stay at value ''
 
-    $(document).ready(() => {
-        $('.subject,.message,.phone,.email').on('keyup', disableSubmitWhenInvalidForm);
-        disableSubmitWhenInvalidForm();
-    });
-
     const toggleMapVisibility = () => {
         const mapDom = document.getElementById('map');
         if (isVisible(mapDom)) {
@@ -70,13 +65,6 @@ title: Contact
         } else {
             unhideTransition(mapDom);
         }
-    }
-
-    const isFormValid = () => {
-        return $('.subject').val().length != 0
-            && $('.message').val().length != 0
-            && $('.phone').val().length != 0
-            && $('.email').val().length != 0;
     }
 
     const hideTransition = (domElement) => {
@@ -96,10 +84,6 @@ title: Contact
             domElement.removeAttribute('hidden');
         }, 1);
     }
-
-    const disableSubmitWhenInvalidForm = () => {
-        $('.submit').prop('disabled', !isFormValid());
-    };
 
     const isVisible = (domElement) => {
         return domElement.getAttribute('hidden') !== HIDDEN_VALUE;

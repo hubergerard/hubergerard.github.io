@@ -59,3 +59,20 @@
         </div>
     </div>
 </section>
+<script>
+    $(document).ready(() => {
+        $('.subject,.message,.phone,.email').on('keyup', disableSubmitWhenInvalidForm);
+        disableSubmitWhenInvalidForm();
+    });
+
+    const disableSubmitWhenInvalidForm = () => {
+        $('.submit').prop('disabled', !isFormValid());
+    };
+
+    const isFormValid = () => {
+        return $('.subject').val().length != 0
+            && $('.message').val().length != 0
+            && $('.phone').val().length != 0
+            && $('.email').val().length != 0;
+    }
+</script>
