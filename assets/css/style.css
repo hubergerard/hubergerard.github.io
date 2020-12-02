@@ -1858,6 +1858,18 @@ code {
 	padding: 12px 34px;
 }
 
+.contact-form .text-primary > * {
+	color: #1f7ed8;
+}
+
+.contact-form hr {
+	border: none;
+    height: 2px;
+    /* Set the hr color */
+    color: #1f7ed8; /* old IE */
+    background-color: #1f7ed8; /* Modern Browsers */
+}
+
 /* 14. Blog */
 
 .blog-wrapper {
@@ -2566,4 +2578,13 @@ blockquote {
 
 .pointer-cursor {
 	cursor: pointer;
+}
+
+.shadow {
+	box-shadow: 0 0 60px 0 rgba(0, 0, 0, .07);
+	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+}
+
+.bg-off {
+	background-color: #f8f9fa;
 }

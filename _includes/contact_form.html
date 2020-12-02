@@ -1,0 +1,61 @@
+<section class="contact-form pt-100 pb-100 bg-off">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="contact-form-title">
+                    <h2>Contactez-nous !</h2>
+                    <p>Nous recevrons directement ce message sur notre adresse email. Réponse garantie en 24h !</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 pt-10 card shadow mb-40 text-primary">
+                <div class="row text-center ">
+                    <div class="col-12 pt-20 text-primary">
+                        <p class="font-weight-bold">1. </p>
+                        <p class="font-weight-bold">Vous complétez ce formulaire</p>
+                        <hr />
+                    </div>
+                    
+                    <div class="col-12 text-primary">
+                        <p class="font-weight-bold">2. </p>
+                        <p class="font-weight-bold">Nous vous recontactons sous 24h</p>
+                        <hr />
+                    </div>
+                    
+                    <div class="col-12 mb-20 text-primary">
+                        <p class="font-weight-bold">3.</p>
+                        <p class="mb-0 font-weight-bold">Nous définissons ensemble une formation qui remplit vos objectifs</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-8 offset-md-1 pt-20 card shadow">
+                <form id="contact-form" action="https://formspree.io/f/xaylqpdg" class="contact-form" method="POST">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="name" name="name" type="text" placeholder="Prénom et Nom">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="phone" name="phone" type="text" placeholder="Téléphone">
+                        </div>
+                        <div class="col-xl-12 mb-20">
+                            <input class="email" name="email" type="email" placeholder="Email">
+                        </div>
+                        <div class="col-xl-12 mb-20">
+                            <input class="subject" name="subject" type="text" placeholder="Formation souhaitée">
+                        </div>
+                        <div class="col-xl-12 mb-20">
+                            <textarea class="message" name="message" id="text-message" cols="30" rows="10"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-xl-12 text-center">
+                            <button class="btn submit" type="submit">Envoyer le message</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="ajax-response"></p>
+            </div>
+        </div>
+    </div>
+</section>
