@@ -1832,6 +1832,7 @@ code {
 }
 
 .contact-form-title p {
+	font-family: 'Open Sans', sans-serif;
 	font-style: italic;
 	width: 60%;
 	margin: 0 auto 55px;
