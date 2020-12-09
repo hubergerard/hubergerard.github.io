@@ -125,14 +125,15 @@ layout: default
 	<section id="description-formation">
 		<div class="container mb-20">
 			<div class="row flex-row-reverse">
-				<div class="col-xs-12 col-md-4 px-1">
+				<!-- Sticky "Reservez" -->
+				<div class="col-xs-12 col-md-4">
 					<div class="sticky-top mt-10" style="top:11.5em">
 						<div class="row">
 							<div class="col-12 mb-50">
 								<div class="services-box">
 									{% if page.icon %}
 									<div class="services-img">
-										<img src="{{page.icon}}" class="img-fluid" alt="{{page.title}}">
+										<img src="{{page.icon}}" alt="{{page.title}}" class="img-fluid">
 									</div>
 									{% endif %}
 									<div class="services-content">
@@ -155,7 +156,7 @@ layout: default
 										</div>
 										<div>
 											{% if page.file-path %}
-											<a class="btn mb-1" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
+											<a class="btn mb-2" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
 											{% endif %}
 											<a class="btn-blue" data-toggle="modal" data-target="#contactModal" style="white-space: normal;"> Réserver la formation </a>	
 										</div>
@@ -176,18 +177,19 @@ layout: default
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<div class="modal-body text-center">
-<<<<<<< HEAD
-								<p>Pour cela, contactez-nous ! Nous pourrons répondre à vos questions et vous inscrire à la prochaine session de formation.</p>
-								<img class="img-tel mb-2" src="/assets/img/services/numero_tel.png"/>
-								<p>Ou par mail : huber.gerard1@gmail.com</p>
-=======
-								<p>Contactez-nous <a href="/pages/contact">ici</a> pour réserver votre formation.</p>
-								<p>Ou bien directement au téléphone. </p>
-								<img class="img-tel" src="/assets/img/services/contact.png"/>
+							<div class="modal-body text-center row">
+								<div class="col-12">
+									<p>Contactez-nous pour réserver votre formation :</p>
+								</div>
+								<div class="col">
+									<a href="/pages/contact"><i class="far fa-envelope fa-6x"></i></a>
+								</div>
+								<div class="col align-middle" hidden="true">
+									<img class="img-tel align-middle" src="/assets/img/services/contact.png"/>
+								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
 							</div>
 						</div>
 					</div>
@@ -212,7 +214,7 @@ layout: default
 >>>>>>> 2d5b922fe3ed5174c8483c57ef0d389b3725bf46
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
 							</div>
 						</div>
 					</div>
@@ -224,7 +226,7 @@ layout: default
 
 					<div class="row">
 						<div class="col-md-12">
-							<p>{{ page.description }}</p>
+							<p>{{ page.intro-description }}</p>
 						</div>
 					</div>
 
@@ -263,7 +265,7 @@ layout: default
 						</div>
 					</div>
 					
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-md-12">
 							<h4><b>Tarif</b></h4>
 							<p>
@@ -271,7 +273,7 @@ layout: default
 								(<a href="{{site.blog-url}}/comment-financer-formation-professionnelle" target="_blank">Comment faire financer ma formation professionnelle ?</a>)
 							</p>
 						</div>
-					</div>
+					</div> -->
 					<hr/>
 					<div class="row">
 						<div class="col-md-12">
@@ -298,6 +300,8 @@ layout: default
 			</div>
 		</div>
 	</section>
+	<!-- contact-form -->
+	{% include contact_form.html %}
 	<script>
 		setTimeout(function() {
 			if (!$('#contactModal').hasClass('in')) {
