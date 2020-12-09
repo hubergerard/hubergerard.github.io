@@ -3,48 +3,8 @@ layout: page
 title: Contact
 ---
 
-<!-- contact-area -->
-<section class="contact-area pb-70 pt-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
-                <div class="contact-person">
-                    <h4>Rencontrez-nous</h4>
-                    <p>Venez échanger avec nous dans nos locaux toulousains!</p>
-                    <div class="blue-as-a-link"><i class="far fa-calendar-alt pr-2"></i>Lun - Ven | de 9h00 à 18h00</div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
-                <div class="contact-person">
-                    <h4>Appelez-nous</h4>
-                    <p>L'appel est certainement le moyen le plus simple d'échanger sur vos besoins.</p>
-                    <div class="blue-as-a-link"><i class="fas fa-phone pr-2"></i>(+33)6 15 24 41 53</div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
-                <div class="contact-person">
-                    <h4>Ecrivez-nous</h4>
-                    <p>Réponse sous 24h.</p>
-                    <a href="mailto:huber.gerard1@gmail.com?subject="Demande d'informations"><i class="far fa-envelope pr-2"></i>huber.gerard1@gmail.com</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- contact-maps -->
-<!-- <div class="maps-area"> -->
-    <!-- <div class="container"> -->
-        <!-- <div class="row"> -->
-            <!-- <div class="col-12"> -->
-                <!-- <div class="maps"> -->
-                    <!-- <a href="#"><img src="/assets/img/map.png" class="img-fluid" alt=""></a> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </div> -->
 <!-- contact-form -->
-<section class="contact-form pb-100">
+<section class="contact-form pt-100">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -59,19 +19,28 @@ title: Contact
                 <form id="contact-form" action="https://formspree.io/f/xaylqpdg" class="contact-form" method="POST">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 mb-20">
-                            <input name="name" type="text" placeholder="Nom">
+                            <input class="name" name="name" type="text" placeholder="Nom">
                         </div>
                         <div class="col-xl-6 col-lg-6 mb-20">
-                            <input name="email" type="email" placeholder="Email">
+                            <input class="company" name="company" type="text" placeholder="Entreprise">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="website" name="website" type="text" placeholder="Site Web">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 mb-20">
+                            <input class="phone" name="phone" type="text" placeholder="Téléphone*">
+                        </div>
+						<div class="col-xl-12 mb-20">
+                            <input class="email" name="email" type="email" placeholder="Email*">
                         </div>
                         <div class="col-xl-12 mb-20">
-                            <input name="subject" type="text" placeholder="Objet">
+                            <input class="subject" name="subject" type="text" placeholder="Objet*">
                         </div>
                         <div class="col-xl-12 mb-20">
-                            <textarea name="message" id="text-message" cols="30" rows="10" placeholder="Message*"></textarea>
+                            <textarea class="message" name="message" id="text-message" cols="30" rows="10" placeholder="Message*"></textarea>
                         </div>
                         <div class="col-xl-12 text-center">
-                            <button class="btn" type="submit">Envoyer le message</button>
+                            <button class="btn submit" type="submit">Envoyer le message</button>
                         </div>
                     </div>
                 </form>
@@ -80,3 +49,99 @@ title: Contact
         </div>
     </div>
 </section>
+
+<!-- contact-area -->
+<section id="contact-area" class="contact-area pt-50 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
+                <div class="contact-person">
+                    <h4>Rencontrez-nous</h4>
+                    <p>Venez échanger avec nous dans <span class="blue-as-a-link pointer-cursor" onclick="toggleMapVisibility()">nos locaux toulousains!</span></p>
+                    <div>
+						<span class="blue-as-a-link pointer-cursor" onclick="toggleMapVisibility()">
+							<i class="far fa-calendar-alt pr-2"></i>
+							Lun - Ven | de 9h00 à 18h00
+						</span>
+					</div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
+                <div class="contact-person">
+                    <h4>Appelez-nous</h4>
+                    <p>L'appel est certainement le moyen le plus simple d'échanger sur vos besoins.</p>
+                    <span><img src="/assets/img/bandeaux/contact-tel.jpg" alt="contact telephone codewise" class="mh-26-px"></span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 text-center text-md-left mb-30">
+                <div class="contact-person">
+                    <h4>Ecrivez-nous</h4>
+                    <p>Réponse sous 24h.</p>
+                    <a href="mailto:huber.gerard1@gmail.com?subject=Demande d'informations"><span><img src="/assets/img/bandeaux/contact-mail.jpg" alt="contact mail codewise" class="mh-26-px"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact-maps -->
+<div id="map" class="maps-area mb-80 opacity map-transition" hidden>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="maps">
+                    <img src="/assets/img/contact/codewise-map.jpg" class="img-fluid" alt="Emplacement CodeWise"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+const HIDDEN_VALUE = ''; // should stay at value ''
+
+$(document).ready(() => {
+	$('.subject,.message,.phone,.email').on('keyup', disableSubmitWhenInvalidForm);
+});
+
+const toggleMapVisibility = () => {
+	const mapDom = document.getElementById('map');
+	if (isVisible(mapDom)) {
+		hideTransition(mapDom);
+	} else {
+		unhideTransition(mapDom);
+	}
+}
+
+const isFormValid = () => {
+    return $('.subject').val().length!= 0 
+		&& $('.message').val().length != 0
+		&& $('.phone').val().length != 0
+		&& $('.email').val().length != 0;
+}
+
+const hideTransition = (domElement) => {
+	setTimeout(() => {
+		domElement.style.opacity = 0;
+	}, 1);
+	setTimeout(() => {
+		domElement.setAttribute('hidden', HIDDEN_VALUE);
+	}, 500);
+}
+
+const unhideTransition = (domElement) => {
+	setTimeout(() => {
+		domElement.style.opacity = 1;
+	}, 50);
+	setTimeout(() => {
+		domElement.removeAttribute('hidden');
+	}, 1);
+}
+
+const disableSubmitWhenInvalidForm = () => {
+	$('.submit').prop('disabled', !isFormValid());    
+};
+
+const isVisible = (domElement) => {
+	return domElement.getAttribute('hidden') !== HIDDEN_VALUE;
+}
+</script>

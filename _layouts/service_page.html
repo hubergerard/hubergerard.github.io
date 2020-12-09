@@ -49,14 +49,14 @@ layout: default
 	</section>
 	<section id="title-section">
 		<div class="container mt-50">
-
-			<div class="row">
-				<div class="col-6 section-title mt-160 mb-30"><h2>{{page.title}}</h2></div>
-				<div class="service-details mb-40 col-6">
+			<div class="row flex-row-reverse">
+				<div class="service-details mb-40 col-12 col-md-6">
 					{% if page.image %}
-					 <img class="mb-20" src="{{page.image}}" alt="{{page.title}}">
+					<img class="mb-20" src="{{page.image}}" alt="{{page.title}}">
 					{% endif %}
 				</div>
+				<div class="col-12 col-md-6 section-title mt-40 mb-60 mt-md-auto mb-md-auto"><h2>{{page.title}}</h2></div>
+				
 			</div>
 
 		</div>
@@ -123,10 +123,10 @@ layout: default
 		</div>
 	</section>
 	<section id="description-formation">
-		<div class="container">
+		<div class="container mb-20">
 			<div class="row flex-row-reverse">
 				<div class="col-xs-12 col-md-4 px-1">
-					<div class="sticky-top" style="top:11em">
+					<div class="sticky-top mt-10" style="top:11.5em">
 						<div class="row">
 							<div class="col-12 mb-50">
 								<div class="services-box">
@@ -166,8 +166,8 @@ layout: default
 					</div>
 				</div>
   
-				<!-- Modal -->
-				<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+				<!-- Modal Reservez votre formation -->
+				<div class="modal fade mt-50 mt-md-200" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -177,9 +177,39 @@ layout: default
 								</button>
 							</div>
 							<div class="modal-body text-center">
+<<<<<<< HEAD
 								<p>Pour cela, contactez-nous ! Nous pourrons répondre à vos questions et vous inscrire à la prochaine session de formation.</p>
 								<img class="img-tel mb-2" src="/assets/img/services/numero_tel.png"/>
 								<p>Ou par mail : huber.gerard1@gmail.com</p>
+=======
+								<p>Contactez-nous <a href="/pages/contact">ici</a> pour réserver votre formation.</p>
+								<p>Ou bien directement au téléphone. </p>
+								<img class="img-tel" src="/assets/img/services/contact.png"/>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+  
+				<!-- Modal Besoin d'aide ? -->
+				<div class="modal fade mt-50 mt-md-200" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="helpModalLabel">Besoin d'aide ?</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body text-center">
+								<p>Vous êtes sur cette page depuis plus de 2 minutes !</p>
+								<p> Contactez-nous <a href="/pages/contact">ici</a> pour recevoir gratuitement l'aide de nos conseillers.</p>
+								<p> Ou bien directement au téléphone.</p>
+								<img class="img-tel" src="/assets/img/services/contact.png"/>
+								
+>>>>>>> 2d5b922fe3ed5174c8483c57ef0d389b3725bf46
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -189,7 +219,7 @@ layout: default
 				</div>
 				<div class="col-xs-12 col-md-8">
 				
-					<h1 class="pb-20 font-weight-bold">Présentation de la formation</h1>
+					<h1 class="font-weight-bold">Présentation de la formation</h1>
 
 
 					<div class="row">
@@ -233,22 +263,25 @@ layout: default
 						</div>
 					</div>
 					
-					<div class="row mt-15">
+					<div class="row">
 						<div class="col-md-12">
 							<h4><b>Tarif</b></h4>
-							<p>{{ page.price }} HT</p>
+							<p>
+								{{ page.price }} HT 
+								(<a href="{{site.blog-url}}/comment-financer-formation-professionnelle" target="_blank">Comment faire financer ma formation professionnelle ?</a>)
+							</p>
 						</div>
 					</div>
 					<hr/>
-					<div class="row mt-30 mb-40">
+					<div class="row">
 						<div class="col-md-12">
 							<h1 class="font-weight-bold">Contenu de la formation</h1>
 							
 							{% for chapter in page.syllabus %}
 								{% if chapter.bigtitle %}
-									<h3 class="mt-35 font-weight-bold">{{ chapter.bigtitle }}</h3>
+									<h3 class="mt-5 font-weight-bold">{{ chapter.bigtitle }}</h3>
 								{% endif %}
-								<h4 class="pt-25"> <b>{{ chapter.title }}</b> </h4>
+								<h4> <b>{{ chapter.title }}</b> </h4>
 								<ul>
 								{% for subpart in chapter.subparts %}
 									<li style="list-style: disc; list-style-position: inside;">
@@ -265,5 +298,11 @@ layout: default
 			</div>
 		</div>
 	</section>
-		
+	<script>
+		setTimeout(function() {
+			if (!$('#contactModal').hasClass('in')) {
+				$('#helpModal').modal();
+			}
+		}, 120000);
+	</script>
 </main>

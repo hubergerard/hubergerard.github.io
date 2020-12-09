@@ -129,6 +129,7 @@ li {
 	list-style: none
 }
 p {
+	font-family: 'Poppins', 'Open Sans', sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 26px;
@@ -173,6 +174,7 @@ label {
 /* button style */
 
 .btn {
+	font-family: 'Open Sans';
 	-moz-user-select: none;
 	background: #1f7ed8;
 	border: medium none;
@@ -199,6 +201,7 @@ label {
 }
 
 .btn-blue {
+	font-family: 'Open Sans';
 	-moz-user-select: none;
 	background: #1f7ed8;
 	border: medium none;
@@ -220,7 +223,12 @@ label {
 	white-space: nowrap;
 }
 
+.btn-blue:hover{
+	color: #fff;
+}
+
 .btn-off {
+	font-family: 'Open Sans';
 	-moz-user-select: none;
 	background: transparent;
 	border: medium none;
@@ -335,6 +343,7 @@ label {
 	margin-left: 30px;
 }
 .main-menu ul li a {
+	font-family: 'Open Sans';
 	color: #020d26;
 	font-size: 15px;
 	padding: 35px 0;
@@ -879,11 +888,48 @@ label {
 	background: none;
 	color: #1f7ed8;
 }
+.services-box a.btn-blue {
+	padding: 11px 15px;
+	font-size: 13px;
+	transition: all .5s;
+	border: 1px solid #1f7ed8;
+	background: #1f7ed8;
+	color: white;
+}
 .services-box a.btn:hover {
 	background: #000;
 	border: 1px solid #000;
 	color: #fff;
 }
+.services-box a.btn-blue:hover {
+	background: #000;
+	border: 1px solid #000;
+	color: #fff;
+}
+
+#description-formation h1, h2, h3, h4, p {
+	margin-bottom: 28px;
+}
+
+#description-formation ul {
+	margin-bottom: 28px;
+}
+
+#description-formation ul li {
+	list-style: disc;
+	list-style-position: inside;
+	font-size: 1rem;
+	color: #7e7e7e;
+}
+
+#description-formation p {
+	font-size: 1rem;
+}
+
+#description-formation table {
+	margin-bottom: 28px;
+}
+
 /* services-active */
 .services-active .slick-arrow {
 	position: absolute;
@@ -1774,7 +1820,11 @@ label {
 	text-transform: uppercase;
 	margin: 5px;
 }
-.sidebar-tad  a:hover{background:#1f7ed8;color:#fff}
+.sidebar-tad a:hover{
+	background:#1f7ed8;
+	color:#fff;
+}
+
 /* blog column */
 .blog-column .blog-title {
   font-size: 18px;
@@ -1919,7 +1969,7 @@ blockquote {
 }
 .pagination ul > li > a,
 .pagination ul > li > span {
-    float: none
+    float: none;
 }
 .pagination ul > li > a {
 	background: #FFF;
@@ -2011,7 +2061,6 @@ blockquote {
 }
 
 .modal {
-	margin-top: 200px;
 	z-index: 10000;
 	overflow: auto;
 	overflow-y: auto;
@@ -2026,5 +2075,38 @@ blockquote {
 }
 
 .img-tel {
-	height: 50px;
+	height: 80px;
+}
+
+.max-height-25 {
+	max-height: 25px;
+}
+
+.mh-80-px {
+	max-height: 80px;
+}
+
+.mh-26-px {
+	max-height: 26px;
+}
+
+.map-transition {
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.max-height-25 {
+	max-height: 25px;
+}
+
+.mh-80-px {
+	max-height: 80px;
+}
+
+.mh-26-px {
+	max-height: 26px;
+}
+
+.pointer-cursor {
+	cursor: pointer;
 }
