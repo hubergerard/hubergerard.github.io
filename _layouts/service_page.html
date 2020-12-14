@@ -188,8 +188,11 @@ layout: default
 									<img class="img-tel align-middle" src="/assets/img/services/contact.png"/>
 								</div>
 							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+							<div class="modal-footer text-left">
+								<div class="text-left">
+									<button type="button" class="btn" data-dismiss="modal">Réserver</button>
+									<button type="button" class="btn-border" data-dismiss="modal">Fermer</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -206,7 +209,7 @@ layout: default
 								</button>
 							</div>
 							<div class="modal-body text-center">
-								<p>Vous êtes sur cette page depuis plus de 2 minutes !</p>
+								<p> Vous êtes sur cette page depuis plus de 2 minutes !</p>
 								<p> Contactez-nous <a href="/pages/contact">ici</a> pour recevoir gratuitement l'aide de nos conseillers.</p>
 								<p> Ou bien directement au téléphone.</p>
 								<img class="img-tel" src="/assets/img/services/contact.png"/>
@@ -303,7 +306,7 @@ layout: default
 	{% include contact_form.html %}
 	<script>
 		setTimeout(function() {
-			if (!$('#contactModal').hasClass('in')) {
+			if (!$('#contactModal').hasClass('show')) {
 				$('#helpModal').modal();
 			}
 		}, 120000);

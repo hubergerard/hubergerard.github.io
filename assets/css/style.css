@@ -2589,3 +2589,27 @@ blockquote {
 .bg-off {
 	background-color: #f8f9fa;
 }
+
+.btn-border {
+	font-family: 'Open Sans';
+	-moz-user-select: none;
+	background: transparent;
+	border: medium none;
+	border-radius: 0;
+	color: #1f7ed8;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 18px 40px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+    border: 1px solid;
+}
