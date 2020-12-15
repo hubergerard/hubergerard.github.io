@@ -25,6 +25,10 @@
 /* 1. Theme default css */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
@@ -182,7 +186,7 @@ code {
 }
 
 *::placeholder {
-	color: #555555;
+	color: #888888;
 	font-size: 14px;
 	opacity: 1;
 }
@@ -268,6 +272,34 @@ code {
 	transition: all 0.3s ease 0s;
 	vertical-align: middle;
 	white-space: nowrap;
+}
+
+
+.btn-border {
+	font-family: 'Open Sans';
+	-moz-user-select: none;
+	background: transparent;
+	border-radius: 0;
+	color: #1f7ed8;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 18px 40px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+    border: 1px solid;
+}
+
+.btn-secondary {
+	border: 1px solid #1f7ed8;
 }
 
 .breadcrumb>.active {
@@ -1843,7 +1875,7 @@ code {
 	border: 2px solid #eee;
 	box-shadow: none;
 	padding: 7px 20px;
-	color: #999999;
+	color: #333333;
 }
 
 .contact-form textarea {
@@ -1851,7 +1883,7 @@ code {
 	border: 2px solid #eee;
 	box-shadow: none;
 	padding: 7px 20px;
-	color: #999999;
+	color: #333333;
 	height: 150px;
 }
 
@@ -2588,28 +2620,4 @@ blockquote {
 
 .bg-off {
 	background-color: #f8f9fa;
-}
-
-.btn-border {
-	font-family: 'Open Sans';
-	-moz-user-select: none;
-	background: transparent;
-	border: medium none;
-	border-radius: 0;
-	color: #1f7ed8;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 12px;
-	font-weight: 800;
-	letter-spacing: 1px;
-	line-height: 1;
-	margin-bottom: 0;
-	padding: 18px 40px;
-	text-align: center;
-	text-transform: uppercase;
-	touch-action: manipulation;
-	transition: all 0.3s ease 0s;
-	vertical-align: middle;
-	white-space: nowrap;
-    border: 1px solid;
 }

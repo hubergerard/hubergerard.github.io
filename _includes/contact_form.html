@@ -3,7 +3,11 @@
         <div class="row">
             <div class="col-12 text-center">
                 <div class="contact-form-title">
+                    {% if include.form-title %}
+                    <h2>{{include.form-title}}</h2>
+                    {% else %}
                     <h2>Contactez-nous !</h2>
+                    {% endif %}
                     <p>Nous recevrons directement ce message sur notre adresse email. Réponse garantie en 24h !</p>
                 </div>
             </div>
@@ -43,11 +47,15 @@
                             <input class="email" name="email" type="email" placeholder="Email">
                         </div>
                         <div class="col-xl-12 mb-20">
-                            <input class="subject" name="subject" type="text" placeholder="Formation souhaitée">
+                            <input class="subject" name="subject" type="text" placeholder="Formation souhaitée" value="{{include.subject}}">
                         </div>
                         <div class="col-xl-12 mb-20">
                             <textarea class="message" name="message" id="text-message" cols="30" rows="10"
-                                placeholder="Message"></textarea>
+                                placeholder="Message">
+                                {%- if include.message -%}
+                                {{- include.message | strip-html}} "{{include.subject}}" {{include.message2}}
+                                {%- endif -%}
+                            </textarea>
                         </div>
                         <div class="col-xl-12 text-center">
                             <button class="btn submit" type="submit">Envoyer le message</button>

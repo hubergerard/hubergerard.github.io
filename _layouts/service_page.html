@@ -158,40 +158,9 @@ layout: default
 											{% if page.file-path %}
 											<a class="btn mb-2" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
 											{% endif %}
-											<a class="btn-blue" data-toggle="modal" data-target="#contactModal" style="white-space: normal;"> Réserver la formation </a>	
+											<a class="btn-blue" href="#contact-form" style="white-space: normal;"> Réserver la formation </a>	
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-  
-				<!-- Modal Reservez votre formation -->
-				<div class="modal fade mt-50 mt-md-200" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="contactModalLabel">Réservez votre formation</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body text-center row">
-								<div class="col-12">
-									<p>Contactez-nous pour réserver votre formation :</p>
-								</div>
-								<div class="col">
-									<a href="/pages/contact"><i class="far fa-envelope fa-6x"></i></a>
-								</div>
-								<div class="col align-middle" hidden="true">
-									<img class="img-tel align-middle" src="/assets/img/services/contact.png"/>
-								</div>
-							</div>
-							<div class="modal-footer text-left">
-								<div class="text-left">
-									<button type="button" class="btn" data-dismiss="modal">Réserver</button>
-									<button type="button" class="btn-border" data-dismiss="modal">Fermer</button>
 								</div>
 							</div>
 						</div>
@@ -203,20 +172,26 @@ layout: default
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="helpModalLabel">Besoin d'aide ?</h5>
+								<h5 class="modal-title" id="helpModalLabel">Une question ?</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<div class="modal-body text-center">
-								<p> Vous êtes sur cette page depuis plus de 2 minutes !</p>
-								<p> Contactez-nous <a href="/pages/contact">ici</a> pour recevoir gratuitement l'aide de nos conseillers.</p>
-								<p> Ou bien directement au téléphone.</p>
-								<img class="img-tel" src="/assets/img/services/contact.png"/>
+							<div class="modal-body text-center row">
+								<div class="col-12">
+									<p> Vous êtes sur cette page depuis plus de 2 minutes !</p>
+								</div>
+								<div class="col-12">
+									<p> Contactez-nous pour tout renseignement.</p>
+								</div>	
 								
+								<div class="col">
+									<a href="/pages/contact"><i class="far fa-envelope fa-6x"></i></a>
+								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+								<a href="/pages/contact"><button type="button" class="btn btn-secondary">Contacter un expert</button></a>
+								<button type="button" class="btn-border" data-dismiss="modal">Fermer</button>
 							</div>
 						</div>
 					</div>
@@ -303,12 +278,18 @@ layout: default
 		</div>
 	</section>
 	<!-- contact-form -->
-	{% include contact_form.html %}
+	<section id="contact-form">
+		{% include contact_form.html subject=page.title 
+			message='Bonjour,&#13;&#13;Je souhaiterais plus d\'informations sur votre formation'
+			message2='afin de pouvoir m\'inscrire à la prochaine session.&#13;&#13;Pouvez-vous me recontacter pour que nous définissions les dates et les formalités d\'inscription ?'
+			form-title='Réservez votre formation' %}	
+	</section>
+	
 	<script>
 		setTimeout(function() {
 			if (!$('#contactModal').hasClass('show')) {
 				$('#helpModal').modal();
 			}
-		}, 120000);
+		}, 1000);
 	</script>
 </main>
