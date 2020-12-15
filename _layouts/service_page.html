@@ -279,9 +279,16 @@ layout: default
 	</section>
 	<!-- contact-form -->
 	<section id="contact-form">
+		{%- capture message -%}
+Bonjour,
+		
+Je souhaiterais plus d'informations sur votre formation "{{ page.title }}" afin de pouvoir m'inscrire à la prochaine session.
+
+Pouvez-vous me recontacter pour que nous définissions les dates et les formalités d'inscription ?
+		{%- endcapture -%}
+		
 		{% include contact_form.html subject=page.title 
-			message='Bonjour,&#13;&#13;Je souhaiterais plus d\'informations sur votre formation'
-			message2='afin de pouvoir m\'inscrire à la prochaine session.&#13;&#13;Pouvez-vous me recontacter pour que nous définissions les dates et les formalités d\'inscription ?'
+			message=message
 			form-title='Réservez votre formation' %}	
 	</section>
 	

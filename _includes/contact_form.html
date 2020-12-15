@@ -53,7 +53,7 @@
                             <textarea class="message" name="message" id="text-message" cols="30" rows="10"
                                 placeholder="Message">
                                 {%- if include.message -%}
-                                {{- include.message | strip-html}} "{{include.subject}}" {{include.message2}}
+                                {{- include.message -}}
                                 {%- endif -%}
                             </textarea>
                         </div>
