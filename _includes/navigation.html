@@ -16,7 +16,7 @@
      
     <li>
 		{% if link.url contains "blog" %}
-		<a href="{{link.url}}" target="_blank">{{link.text}}{% if link.submenu %}<i class="icofont-simple-down"></i>{% endif %}</a>
+		<a href="{{link.url}}" target="_blank" rel="noopener">{{link.text}}{% if link.submenu %}<i class="icofont-simple-down"></i>{% endif %}</a>
 		{% else %}
         <a href="{{link.url}}">{{link.text}}{% if link.submenu %}<i class="icofont-simple-down"></i>{% endif %}</a>
 		{% endif %}
