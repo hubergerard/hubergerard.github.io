@@ -4,25 +4,30 @@ formations:
         link: codewise.teachable.com/p/angular
         description: Apprenez à créer des applications web dynamiques avec Angular 
         hidden: false
+        tag: Distanciel
     -   displayName: Formation Angular avancé
         imgUrl: /assets/img/services/angular.webp
         link: 
         hidden: true
         description:
+        tag: 
     -   displayName: Formation Node.js
         imgUrl: /assets/img/services/node-js.webp
         link:
         hidden: true
         description:
+        tag: Distanciel
     -   displayName: Formation React.js
         imgUrl: /assets/img/services/react-js.webp
         link: 
         hidden: true
         description:
+        tag: Distanciel
     -   displayName: Formation Vue.js
         imgUrl: /assets/img/services/vue-js.webp
         link: 
         hidden: true
         description:
+        tag: Distanciel
         
     

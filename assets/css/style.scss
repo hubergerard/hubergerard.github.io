@@ -1050,9 +1050,28 @@ code {
 	margin: auto;
 }
 
-.services-img {
+
+@keyframes animatedBackground {
+	from {
+	  background-size: 100%;
+	  background-position: 50%;
+	}
+	to {
+	  background-size: 115%;
+	  background-position: 50%;
+	}
+  }
+
+div.services-img {
 	margin-bottom: 25px;
 	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 217px;
+}
+
+div.services-img:hover{
+	animation: animatedBackground 2s linear infinite alternate ;
 }
 
 .services-img img {
@@ -2644,4 +2663,26 @@ blockquote {
 
 .bg-off {
 	background-color: #f8f9fa;
+}
+
+.tag-service{
+	z-index: 1;
+	position: relative;
+	left: 9px;
+	top: 9px;
+	border-radius: 3em !important;
+	line-height: 1.2 !important;
+	font-weight: 600;
+	padding: 6px 12px;
+	color: white;
+}
+
+#tag-pre{
+
+	background-color: #4CAF50;
+}
+
+#tag-dis{
+
+	background-color: #03A9F4;
 }
