@@ -1031,8 +1031,6 @@ code {
 	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
 }
 
-.services-box:hover {}
-
 .services-content {
 	padding: 20px;
 	padding-top: 0px;
@@ -1057,7 +1055,7 @@ code {
 	  background-position: 50%;
 	}
 	to {
-	  background-size: 115%;
+	  background-size: 125%;
 	  background-position: 50%;
 	}
   }
@@ -1071,7 +1069,7 @@ div.services-img {
 }
 
 div.services-img:hover{
-	animation: animatedBackground 2s linear infinite alternate ;
+	animation: animatedBackground 1s linear infinite alternate ;
 }
 
 .services-img img {
@@ -1260,8 +1258,6 @@ div.services-img:hover{
 	color: #222;
 }
 
-.sidebar-download {}
-
 .servicee-sidebar img {
 	width: 100%;
 }
@@ -1402,8 +1398,6 @@ div.services-img:hover{
 .portfolio-thumb img {
 	transition: .3s;
 }
-
-.portfolio-thumb img {}
 
 .portfolio-wrapper:hover .portfolio-thumb img {
 	transform: rotate(3deg) scale(1.1);
@@ -2085,8 +2079,6 @@ div.services-img:hover{
 	width: 50px;
 }
 
-.sidebar-form {}
-
 .sidebar-form form {
 	position: relative;
 }
@@ -2198,8 +2190,6 @@ div.services-img:hover{
 	margin-bottom: 0;
 }
 
-.widget-social {}
-
 .widget-social a {
 	background: #000 none repeat scroll 0 0;
 	color: #fff;
@@ -2235,8 +2225,6 @@ div.services-img:hover{
 .widget-social a:hover {
 	opacity: 0.8;
 }
-
-.sidebar-link {}
 
 .sidebar-link li {
 	border-bottom: 1px solid #f8f9fa;
@@ -2283,10 +2271,6 @@ div.services-img:hover{
 	width: 33.33%;
 }
 
-.instagram-link li a {}
-
-.sidebar-tad {}
-
 .sidebar-tad li {
 	float: left;
 	margin-bottom: 5px;
@@ -2321,8 +2305,6 @@ div.services-img:hover{
 	font-size: 22px;
 	line-height: 1.5;
 }
-
-.pagination-col {}
 
 .pagination-col .pagination {
 	margin-top: 0;
@@ -2450,8 +2432,6 @@ blockquote {
 	color: #fff;
 }
 
-.post-comments-form {}
-
 .post-comments-form input {
 	border: 1px solid #e6e6e6;
 	height: 45px;
@@ -2467,8 +2447,6 @@ blockquote {
 	padding: 15px;
 	width: 100%;
 }
-
-.post-comments-form button {}
 
 /* 15. Pagination */
 
@@ -2507,8 +2485,6 @@ blockquote {
 	padding: 9px 18px;
 	border: 1px solid #ddd;
 }
-
-.pagination ul>li:first-child>a, .pagination ul>li:last-child>a {}
 
 .pagination ul>li>a:hover, .pagination ul>li>a:focus, .pagination ul>.active>a, .pagination ul>.active>span {
 	color: #fff;
@@ -2677,12 +2653,10 @@ blockquote {
 	color: white;
 }
 
-#tag-pre{
-
+#tag-pre {
 	background-color: #4CAF50;
 }
 
-#tag-dis{
-
+#tag-dis {
 	background-color: #03A9F4;
 }
