@@ -32,20 +32,25 @@ layout: default
 					<div class="breadcrumb-title sm-size">
 						<h2>{{page.title}}</h2>
 					</div>
+					<div class="mt-20 w-50 d-flex justify-content-between align-items-center">
+						<span id="duration-info" class="span-info-courses d-flex align-items-center text-white fs-16">
+								<img class=" mr-2" src="../assets/img/icons/feather-clock.png" alt="icône horloge">
+								<b>{{page.duration}}</b>
+						</span>
+						<span id="price-info" class="span-info-courses d-flex align-items-center text-white fs-16" >
+							<img class="w-25 mr-2" src="../assets/img/icons/awesome-coins.png" alt="icône monnaie">
+							<b>{{page.price}}</b>
+						</span>
+					</div>
 				</div>
 			</div>
-			<!-- <div class="col-xl-4 col-md-6 text-left text-md-right"> -->
-				<!-- <div class="breadcrumb"> -->
-					<!-- <ul> -->
-						<!-- <li><a href="{{site.url}}">Home</a></li> -->
-						<!-- <li class="text-white pl-1">Pages /</li> -->
-						<!-- <li class="text-white pl-1">{{page.title}}</li> -->
-					<!-- </ul> -->
-				<!-- </div> -->
-			<!-- </div> -->
-			
 		</div>
-		
+		<div id="difficulty-info" class="d-flex mt-200">
+			<span class="text-white fs-16">
+				<b>Difficulté </b>
+				<img class="w-25 ml-2" src="../assets/img/icons/{{page.educational-level}}.png" alt="difficulty {{page.educational-level}}">
+			</span>
+		</div>
 	</section>
 	<section id="title-section">
 		<div class="container mt-50">
@@ -56,7 +61,6 @@ layout: default
 					{% endif %}
 				</div>
 				<div class="col-12 col-md-6 section-title mt-40 mb-60 mt-md-auto mb-md-auto"><h2>{{page.title}}</h2></div>
-				
 			</div>
 
 		</div>
@@ -68,7 +72,7 @@ layout: default
 					<div class="col-xs-12 col-lg m-3">
 						<div class="row">
 							<div class="col-4 align-self-center">
-								<img src="{{site.url}}/assets/img/icons/sur_mesure.png" class="mw-80 mh-80 icon-bg"/>
+								<img src="{{site.url}}/assets/img/icons/sur_mesure.png" class="mw-80 mh-80 icon-bg" alt="icône sur mesure"/>
 							</div>
 							<div class="col-8 align-self-center">
 								<h4> Une formation flexible 100% sur mesure </h4>
@@ -80,7 +84,7 @@ layout: default
 					<div class="col-xs-12 col-lg m-3">
 						<div class="row">
 							<div class="col-4 align-self-center">
-								<img src="{{site.url}}/assets/img/icons/suivi_perso.png" class="mw-80 mh-80 icon-bg"/>
+								<img src="{{site.url}}/assets/img/icons/suivi_perso.png" class="mw-80 mh-80 icon-bg" alt="icône suivi personnalisé"/>
 							</div>
 							<div class="col-8 align-self-center">
 								<div class="">
@@ -97,7 +101,7 @@ layout: default
 					<div class="col-xs-12 col-lg m-3">
 						<div class="row">
 							<div class="col-4 align-self-center">
-								<img src="{{site.url}}/assets/img/icons/cours_professionalisant.png" class="mw-80 mh-80 icon-bg"/>
+								<img src="{{site.url}}/assets/img/icons/cours_professionalisant.png" class="mw-80 mh-80 icon-bg" alt="icône cours professionalisant"/>
 							</div>
 							<div class="col-8 align-self-center">
 								<h4> Une pédagogie adaptée aux professionels </h4>
@@ -109,7 +113,7 @@ layout: default
 					<div class="col-xs-12 col-lg m-3">
 						<div class="row">
 							<div class="col-4 align-self-center">
-								<img src="{{site.url}}/assets/img/icons/ressources_a_emporter.png" class="mw-80 mh-80 icon-bg"/>
+								<img src="{{site.url}}/assets/img/icons/ressources_a_emporter.png" class="mw-80 mh-80 icon-bg" alt="icône ressources à emporter"/>
 							</div>
 							<div class="col-8 align-self-center">
 								<h4> Des contenus complémentaires </h4>
@@ -158,38 +162,10 @@ layout: default
 											{% if page.file-path %}
 											<a class="btn mb-2" href="{{page.file-path}}" style="white-space: normal;" download="{{page.title}}.pdf"> Télécharger le programme </a>
 											{% endif %}
-											<a class="btn-blue" data-toggle="modal" data-target="#contactModal" style="white-space: normal;"> Réserver la formation </a>	
+											<a class="btn-blue" href="#contact-form" style="white-space: normal;"> Réserver la formation </a>	
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-  
-				<!-- Modal Reservez votre formation -->
-				<div class="modal fade mt-50 mt-md-200" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="contactModalLabel">Réservez votre formation</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body text-center row">
-								<div class="col-12">
-									<p>Contactez-nous pour réserver votre formation :</p>
-								</div>
-								<div class="col">
-									<a href="/pages/contact"><i class="far fa-envelope fa-6x"></i></a>
-								</div>
-								<div class="col align-middle" hidden="true">
-									<img class="img-tel align-middle" src="/assets/img/services/contact.png"/>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
 							</div>
 						</div>
 					</div>
@@ -200,30 +176,33 @@ layout: default
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="helpModalLabel">Besoin d'aide ?</h5>
+								<h5 class="modal-title" id="helpModalLabel">Une question ?</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<div class="modal-body text-center">
-								<p>Vous êtes sur cette page depuis plus de 2 minutes !</p>
-								<p> Contactez-nous <a href="/pages/contact">ici</a> pour recevoir gratuitement l'aide de nos conseillers.</p>
-								<p> Ou bien directement au téléphone.</p>
-								<img class="img-tel" src="/assets/img/services/contact.png"/>
+							<div class="modal-body text-center row">
+								<div class="col-12">
+									<p> Vous êtes sur cette page depuis plus de 2 minutes !</p>
+								</div>
+								<div class="col-12">
+									<p> Contactez-nous pour tout renseignement.</p>
+								</div>	
 								
->>>>>>> 2d5b922fe3ed5174c8483c57ef0d389b3725bf46
+								<div class="col">
+									<a href="/pages/contact"><i class="far fa-envelope fa-6x"></i></a>
+								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+								<a href="/pages/contact"><button type="button" class="btn btn-secondary">Contacter un expert</button></a>
+								<button type="button" class="btn-border" data-dismiss="modal">Fermer</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-8">
 				
+				<div class="col-xs-12 col-md-8">			
 					<h1 class="font-weight-bold">Présentation de la formation</h1>
-
-
 					<div class="row">
 						<div class="col-md-12">
 							<p>{{ page.intro-description }}</p>
@@ -239,7 +218,7 @@ layout: default
 							<p>{{ page.format }}</p>
 						</div>
 					</div>
-					
+
 					<div class="row">
 						<div class="col-md-12">
 							<h4><b>Environnement de travail</b></h4>
@@ -265,15 +244,15 @@ layout: default
 						</div>
 					</div>
 					
-					<!-- <div class="row">
+					<div class="row">
 						<div class="col-md-12">
 							<h4><b>Tarif</b></h4>
 							<p>
 								{{ page.price }} HT 
-								(<a href="{{site.blog-url}}/comment-financer-formation-professionnelle" target="_blank">Comment faire financer ma formation professionnelle ?</a>)
+								(<a href="{{site.blog-url}}/comment-financer-formation-professionnelle" target="_blank" rel="noopener">Comment faire financer ma formation professionnelle ?</a>)
 							</p>
 						</div>
-					</div> -->
+					</div>
 					<hr/>
 					<div class="row">
 						<div class="col-md-12">
@@ -301,10 +280,23 @@ layout: default
 		</div>
 	</section>
 	<!-- contact-form -->
-	{% include contact_form.html %}
+	<section id="contact-form">
+		{%- capture message -%}
+Bonjour,
+		
+Je souhaiterais plus d'informations sur votre formation "{{ page.title }}" afin de pouvoir m'inscrire à la prochaine session.
+
+Pouvez-vous me recontacter pour que nous définissions les dates et les formalités d'inscription ?
+		{%- endcapture -%}
+		
+		{% include contact_form.html subject=page.title 
+			message=message
+			form-title='Réservez votre formation' %}	
+	</section>
+	
 	<script>
 		setTimeout(function() {
-			if (!$('#contactModal').hasClass('in')) {
+			if (!$('#contactModal').hasClass('show')) {
 				$('#helpModal').modal();
 			}
 		}, 120000);
