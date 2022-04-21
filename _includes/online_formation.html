@@ -15,9 +15,11 @@
             {% if formation.hidden == false  %}
             <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
                 <div class="services-box">
-                    <a href="{{formation.link}}">
-						<div class="services-img">
-							<img src="{{formation.imgUrl}}" class="img-fluid" alt="{{formation.displayName}}"/>
+                    <a target="_blank" href="{{formation.link}}">
+						<div class="services-img" style="background-image: url('{{ formation.imgUrl }}');">
+                            {% if formation.tag %}
+                            <span id="tag-dis" class="badge rounded-pill tag-service">{{ formation.tag }}</span>
+                            {% endif %}
 						</div>
 					</a>
                     <div class="services-content">
@@ -27,7 +29,7 @@
 						<div class="card-text">
                             <p>{{formation.description}}</p>
                         </div>
-						<a href="{{formation.link}}" class="btn">Plus d'infos</a>
+						<a target="_blank" href="{{formation.link}}" class="btn">Plus d'infos</a>
 					</div>
 				</div>
             </div>
