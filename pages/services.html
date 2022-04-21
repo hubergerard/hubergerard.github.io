@@ -3,13 +3,15 @@ layout: page
 title: Formations
 ---
 
+{% include online_formation.html %}
+
 <!-- services-area -->
 <section class="service-area pt-100 pb-50">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 text-center pb-40 ">
                 <div class="section-title service-title">
-                    <h2>Nos formations</h2>
+                    <h2>Nos formations en présentiel</h2>
                     <p>Choisissez votre techno.</p>
                 </div>
             </div>
@@ -17,13 +19,15 @@ title: Formations
         <div class="row">
             {% assign sortedServices = site.services | sort: 'title' %}
             {% for service in sortedServices %}
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                 <div class="services-box">
                     {% if service.icon %}
                     <a href="{{service.url}}">
-						<div class="services-img">
-							<img src="{{service.icon}}" class="img-fluid" alt="{{service.title}}"/>
-						</div>
+						<div class="services-img" style="background-image: url('{{ service.icon }}');">
+                            {% if service.tag %}
+                            <span id="tag-pre" class="badge rounded-pill tag-service">{{ service.tag }}</span>
+                            {% endif %}
+                        </div>
 					</a>
                     {% endif %}
                     <div class="services-content">

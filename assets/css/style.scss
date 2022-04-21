@@ -1025,13 +1025,12 @@ code {
 
 /* 5. Service */
 
-.services-box {
-	/* border: 1px solid #e6e6e6; */
+.services-box { 
 	transition: .3s;
 	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+	max-width: 416px;
+	margin: auto;
 }
-
-.services-box:hover {}
 
 .services-content {
 	padding: 20px;
@@ -1050,9 +1049,32 @@ code {
 	margin: auto;
 }
 
-.services-img {
+
+@keyframes animatedBackground {
+	from {
+	  background-size: 100%;
+	  background-position: 50%;
+	}
+	to {
+	  background-size: 125%;
+	  background-position: 50%;
+	}
+  }
+
+div.services-img {
 	margin-bottom: 25px;
 	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 50%;
+}
+
+div.services-img[style*="background-image"] {
+	padding-bottom: Min(57% , 217px);
+}
+
+div.services-img:hover{
+	animation: animatedBackground 1s linear infinite alternate;
 }
 
 .services-img img {
@@ -1241,8 +1263,6 @@ code {
 	color: #222;
 }
 
-.sidebar-download {}
-
 .servicee-sidebar img {
 	width: 100%;
 }
@@ -1383,8 +1403,6 @@ code {
 .portfolio-thumb img {
 	transition: .3s;
 }
-
-.portfolio-thumb img {}
 
 .portfolio-wrapper:hover .portfolio-thumb img {
 	transform: rotate(3deg) scale(1.1);
@@ -2066,8 +2084,6 @@ code {
 	width: 50px;
 }
 
-.sidebar-form {}
-
 .sidebar-form form {
 	position: relative;
 }
@@ -2179,8 +2195,6 @@ code {
 	margin-bottom: 0;
 }
 
-.widget-social {}
-
 .widget-social a {
 	background: #000 none repeat scroll 0 0;
 	color: #fff;
@@ -2216,8 +2230,6 @@ code {
 .widget-social a:hover {
 	opacity: 0.8;
 }
-
-.sidebar-link {}
 
 .sidebar-link li {
 	border-bottom: 1px solid #f8f9fa;
@@ -2264,10 +2276,6 @@ code {
 	width: 33.33%;
 }
 
-.instagram-link li a {}
-
-.sidebar-tad {}
-
 .sidebar-tad li {
 	float: left;
 	margin-bottom: 5px;
@@ -2302,8 +2310,6 @@ code {
 	font-size: 22px;
 	line-height: 1.5;
 }
-
-.pagination-col {}
 
 .pagination-col .pagination {
 	margin-top: 0;
@@ -2431,8 +2437,6 @@ blockquote {
 	color: #fff;
 }
 
-.post-comments-form {}
-
 .post-comments-form input {
 	border: 1px solid #e6e6e6;
 	height: 45px;
@@ -2448,8 +2452,6 @@ blockquote {
 	padding: 15px;
 	width: 100%;
 }
-
-.post-comments-form button {}
 
 /* 15. Pagination */
 
@@ -2488,8 +2490,6 @@ blockquote {
 	padding: 9px 18px;
 	border: 1px solid #ddd;
 }
-
-.pagination ul>li:first-child>a, .pagination ul>li:last-child>a {}
 
 .pagination ul>li>a:hover, .pagination ul>li>a:focus, .pagination ul>.active>a, .pagination ul>.active>span {
 	color: #fff;
@@ -2644,4 +2644,24 @@ blockquote {
 
 .bg-off {
 	background-color: #f8f9fa;
+}
+
+.tag-service{
+	z-index: 1;
+	position: relative;
+	left: 9px;
+	top: 9px;
+	border-radius: 3em !important;
+	line-height: 1.2 !important;
+	font-weight: 600;
+	padding: 6px 12px;
+	color: white;
+}
+
+#tag-pre {
+	background-color: #4CAF50;
+}
+
+#tag-dis {
+	background-color: #03A9F4;
 }
