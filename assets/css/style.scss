@@ -1025,10 +1025,11 @@ code {
 
 /* 5. Service */
 
-.services-box {
-	/* border: 1px solid #e6e6e6; */
+.services-box { 
 	transition: .3s;
 	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+	max-width: 416px;
+	margin: auto;
 }
 
 .services-content {
@@ -1065,11 +1066,15 @@ div.services-img {
 	overflow: hidden;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	height: 217px;
+	background-position: 50%;
+}
+
+div.services-img[style*="background-image"] {
+	padding-bottom: Min(57% , 217px);
 }
 
 div.services-img:hover{
-	animation: animatedBackground 1s linear infinite alternate ;
+	animation: animatedBackground 1s linear infinite alternate;
 }
 
 .services-img img {
