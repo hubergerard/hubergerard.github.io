@@ -199,6 +199,10 @@ code {
 
 /* button style */
 
+.btn:disabled {
+	cursor: default
+}
+
 .btn {
 	font-family: 'Open Sans';
 	-moz-user-select: none;
