@@ -1649,6 +1649,26 @@ div.services-img:hover{
 	font-size: 14px;
 	color: #777;
 }
+.owl-carousel{
+	position: relative;
+}
+.owl-carousel .nav-button{
+	position: absolute;
+	cursor: pointer;
+	font-size: 2rem;
+	top: 100px !important;
+	&.fa-chevron-right{
+		right: 0px;
+	}
+	&.fa-chevron-left{
+		left: 0px;
+	}
+  }
+
+.testimonial-img{
+max-height: 150px;
+}
+
 
 /* 11. Footer */
 
