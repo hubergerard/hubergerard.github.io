@@ -165,7 +165,8 @@
   $(".testimonial-active").owlCarousel({
     loop: true,
     margin: 10,
-    nav: false,
+    nav: true,
+    navText: ["<i class='nav-button fa fa-chevron-left'></i>","<i class='nav-button fa fa-chevron-right' style=\"float:right;\"></i>"],
     dots: false,
     responsive: {
       0: {
