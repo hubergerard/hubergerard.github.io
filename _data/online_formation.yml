@@ -11,23 +11,5 @@ formations:
         hidden: true
         description:
         tag: En ligne
-    -   displayName: Formation Node.js
-        imgUrl: /assets/img/services/node-js.webp
-        link:
-        hidden: true
-        description:
-        tag: En ligne
-    -   displayName: Formation React.js
-        imgUrl: /assets/img/services/react-js.webp
-        link: 
-        hidden: true
-        description:
-        tag: En ligne
-    -   displayName: Formation Vue.js
-        imgUrl: /assets/img/services/vue-js.webp
-        link: 
-        hidden: true
-        description:
-        tag: En ligne
-        
+
     

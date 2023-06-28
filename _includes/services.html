@@ -9,15 +9,17 @@
             </div>
         </div>
 		<div class="row">
-			{% assign sortedServices = site.services | sort: 'title' %}
-            {% for service in sortedServices limit : 3 %}
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
+            {% assign sortedServices = site.services | sort: 'title' %}
+            {% for service in sortedServices %}
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                 <div class="services-box">
                     {% if service.icon %}
-					<a href="{{service.url}}">
-						<div class="services-img">
-							<img src="{{service.icon}}" class="img-fluid" alt="{{service.title}}">
-						</div>
+                    <a href="{{service.url}}">
+						<div class="services-img" style="background-image: url('{{ service.icon }}');">
+                            {% if service.tag %}
+                            <span id="tag-pre" class="badge rounded-pill tag-service">{{ service.tag }}</span>
+                            {% endif %}
+                        </div>
 					</a>
                     {% endif %}
                     <div class="services-content">
@@ -31,6 +33,31 @@
 					</div>
 				</div>
             </div>
+            {% endfor %}
+            {% assign formations = site.data.online_formation.formations %}
+            {% for formation in formations %}
+            {% if formation.hidden == false  %}
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
+                <div class="services-box">
+                    <a target="_blank" href="{{formation.link}}">
+						<div class="services-img" style="background-image: url('{{ formation.imgUrl }}');">
+                            {% if formation.tag %}
+                            <span id="tag-dis" class="badge rounded-pill tag-service">{{ formation.tag }}</span>
+                            {% endif %}
+						</div>
+					</a>
+                    <div class="services-content">
+                        <div class="card-title">
+                            <h5>{{formation.displayName}}</h5>
+                        </div>
+						<div class="card-text">
+                            <p>{{formation.description}}</p>
+                        </div>
+						<a target="_blank" href="{{formation.link}}" class="btn">Plus d'infos</a>
+					</div>
+				</div>
+            </div>
+            {% endif %}
             {% endfor %}
         </div>
         <!-- <div class="row"> -->
