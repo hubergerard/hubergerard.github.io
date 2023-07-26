@@ -1,16 +1,16 @@
 testimonials:
-  - name: "Boumedienne Messadia"
-    photoUrl: "/assets/img/testimonials/boumedienne_messadia.jpeg"
-    linkedinUrl: "https://www.linkedin.com/in/boumedienne-messadia-6a92551a0/"
-    description: "J’ai suivi une formation en spécialisation sur Angular pendant 3 semaines et j’ai trouvé cette expérience très intéressante et enrichissante."
-    title: "Un Voyage Éclair dans l’Univers Angular"
-    rating: 4
   - name: "Kevin Radlowski"
     photoUrl: "/assets/img/testimonials/kevin_radlowski.jpeg"
     linkedinUrl: "https://www.linkedin.com/in/kevin-radlowski/"
     description: "Je suis reconnaissant envers Huber pour cette opportunité d’apprentissage enrichissante qui a eu un impact significatif sur ma carrière, et je recommande vivement cette formation à tous ceux qui cherchent à développer leurs compétences."
     title: "Formation enrichissante et formateur compétent"
     rating: 5
+  - name: "Boumedienne Messadia"
+    photoUrl: "/assets/img/testimonials/boumedienne_messadia.jpeg"
+    linkedinUrl: "https://www.linkedin.com/in/boumedienne-messadia-6a92551a0/"
+    description: "J’ai suivi une formation en spécialisation sur Angular pendant 3 semaines et j’ai trouvé cette expérience très intéressante et enrichissante."
+    title: "Un Voyage Éclair dans l’Univers Angular"
+    rating: 4
   - name: "Laurent Saez"
     photoUrl: "/assets/img/testimonials/laurent_saez.jpeg"
     linkedinUrl: "https://www.linkedin.com/in/laurent-saez/"
