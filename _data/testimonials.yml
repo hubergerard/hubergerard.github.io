@@ -29,12 +29,6 @@ testimonials:
     description: "Très bonne formation, c’était court (une semaine) mais très interessant et instructif. Formateur très à l’écoute et on ressent la passion du code dans ces cours."
     title: "Formation courte Angular, première approche."
     rating: 5
-  - name: "Rémi Descollonges"
-    photoUrl: "/assets/img/testimonials/remi_descollonges.jpeg"
-    linkedinUrl: "https://www.linkedin.com/in/remi-descollonges-66a913225/"
-    description: "Formation de bonne qualité. Les explications et les live coding sont clairs et permettent d’intégrer plus facilement tout les notions abordées."
-    title: "Retour formation Angular"
-    rating: 4
   - name: "Ioannis Nikas "
     photoUrl: "/assets/img/testimonials/ioannis_nikas.jpeg"
     linkedinUrl: "https://www.linkedin.com/in/ioannis-nikas-5773b318/"
