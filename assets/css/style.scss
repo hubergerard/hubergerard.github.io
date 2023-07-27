@@ -1091,6 +1091,38 @@ p.about-text {
   align-self: flex-end;
 }
 
+.about-home-text {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 36px;
+  position: relative;
+  width: 90%;
+}
+
+.about-home-text::before {
+  position: absolute;
+  content: "\f10d";
+  font-family: "Font Awesome 5 free";
+  top: 0;
+  left: -40px;
+  font-style: normal;
+  font-size: 27px;
+  color: #1f7ed8;
+}
+
+.about-home-text::after {
+  position: absolute;
+  content: "\f10e";
+  font-family: "Font Awesome 5 free";
+  bottom: 0;
+  right: -40px;
+  font-style: normal;
+  font-size: 27px;
+  color: #1f7ed8;
+}
+
 /* 5. Service */
 
 .services-box {
@@ -1663,6 +1695,10 @@ p {
   width: initial;
 }
 
+.testimonial-linkedin-icon {
+  color: #0a66c2;
+}
+
 /* 10. Team */
 
 .single-team {
@@ -1828,10 +1864,6 @@ p {
 
 .linkedin-bg {
   background: #0077b5;
-}
-
-.testimonial-linkedin-icon {
-  color: #1696e7;
 }
 
 .codewise-bg {
@@ -2623,6 +2655,18 @@ blockquote {
 .owl-carousel .owl-item .single-clients img {
   display: inline-block;
   width: inherit;
+<<<<<<< HEAD
+=======
+}
+
+.owl-stage {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  img {
+    max-height: 70px;
+  }
+>>>>>>> c7130a1... delete images clients, modify section homepage
 }
 
 #scrollUp {
@@ -2776,3 +2820,10 @@ blockquote {
 #tag-dis {
   background-color: #03a9f4;
 }
+<<<<<<< HEAD
+=======
+
+.gap-10 {
+  gap: 10px;
+}
+>>>>>>> c7130a1... delete images clients, modify section homepage

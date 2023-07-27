@@ -7,74 +7,61 @@
                     <p>Prêt à propulser votre carrière de développeur Angular vers de nouveaux sommets ?</p>
                 </div>
             </div>
-        </div>
-		<div class="row">
-            {% assign formations = site.data.online_formation.formations %}
-            {% for formation in formations %}
-            {% if formation.hidden == false  %}
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
-                <div class="services-box">
-                    <a target="_blank" href="{{formation.link}}">
-						<div class="services-img" style="background-image: url('{{ formation.imgUrl }}');">
-                            {% if formation.tag %}
-                            <span id="tag-dis" class="badge rounded-pill tag-service">{{ formation.tag }}</span>
-                            {% endif %}
-						</div>
-					</a>
-                    <div class="services-content">
-                        <div class="card-title">
-                            <h5>{{formation.displayName}}</h5>
-                        </div>
-						<div class="card-text">
-                            <p>{{formation.description}}</p>
-                        </div>
-						<a target="_blank" href="{{formation.link}}" class="btn">Plus d'infos</a>
-					</div>
-				</div>
+            <div class="card-text">
+              <p>{{formation.description}}</p>
             </div>
-            {% endif %}
-            {% endfor %}
-            {% assign sortedServices = site.services | sort: 'title' %}
-            {% for service in sortedServices %}
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                <div class="services-box">
-                    {% if service.icon %}
-                    <a href="{{service.url}}">
-						<div class="services-img" style="background-image: url('{{ service.icon }}');">
-                            {% if service.tag %}
-                            <span id="tag-pre" class="badge rounded-pill tag-service">{{ service.tag }}</span>
-                            {% endif %}
-                        </div>
-					</a>
-                    {% endif %}
-                    <div class="services-content">
-                        <div class="card-title">
-                            <h5>{{service.title}}</h5>
-                        </div>
-						<div class="card-text">
-                            <p>{{service.short-description}}</p>
-                        </div>
-						<a href="{{service.url}}" class="btn">Plus d'infos</a>
-					</div>
-				</div>
-            </div>
-            {% endfor %}
+            <a target="_blank" href="{{formation.link}}" class="btn"
+              >Plus d'infos</a
+            >
+          </div>
         </div>
-        <!-- <div class="row"> -->
-            <!-- {% for service in site.services %} -->
-            <!-- <div class="col-lg-4 col-md-6 text-center mb-30"> -->
-                <!-- <div class="features-wrap"> -->
-                    <!-- {% if service.icon %} -->
-                    <!-- <div class="features-icon"> -->
-                        <!-- <img src="{{service.icon}}" alt="{{service.title}}"> -->
-                    <!-- </div> -->
-                    <!-- {% endif %} -->
-                    <!-- <h4>{{service.title}}</h4> -->
-                    <!-- <p>{{service.description}}</p> -->
-                    <!-- <a href="{{service.url}}">Read More</a> -->
-                <!-- </div> -->
-            <!-- </div> -->
-            <!-- {% endfor %} -->
-        <!-- </div> -->
+      </div>
+      {% endif %} {% endfor %} {% assign sortedServices = site.services | sort:
+      'title' %} {% for service in sortedServices %}
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+        <div class="services-box">
+          {% if service.icon %}
+          <a href="{{service.url}}">
+            <div
+              class="services-img"
+              style="background-image: url('{{ service.icon }}');"
+            >
+              {% if service.tag %}
+              <span id="tag-pre" class="badge rounded-pill tag-service"
+                >{{ service.tag }}</span
+              >
+              {% endif %}
+            </div>
+          </a>
+          {% endif %}
+          <div class="services-content">
+            <div class="card-title">
+              <h5>{{service.title}}</h5>
+            </div>
+            <div class="card-text">
+              <p>{{service.short-description}}</p>
+            </div>
+            <a href="{{service.url}}" class="btn">Plus d'infos</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
+    <!-- <div class="row"> -->
+    <!-- {% for service in site.services %} -->
+    <!-- <div class="col-lg-4 col-md-6 text-center mb-30"> -->
+    <!-- <div class="features-wrap"> -->
+    <!-- {% if service.icon %} -->
+    <!-- <div class="features-icon"> -->
+    <!-- <img src="{{service.icon}}" alt="{{service.title}}"> -->
+    <!-- </div> -->
+    <!-- {% endif %} -->
+    <!-- <h4>{{service.title}}</h4> -->
+    <!-- <p>{{service.description}}</p> -->
+    <!-- <a href="{{service.url}}">Read More</a> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- {% endfor %} -->
+    <!-- </div> -->
+  </div>
 </section>
