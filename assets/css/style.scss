@@ -1103,6 +1103,7 @@ p.about-text {
 
 .about-home-text::before {
   position: absolute;
+  font-weight: 600;
   content: "\f10d";
   font-family: "Font Awesome 5 free";
   top: 0;
@@ -1114,6 +1115,7 @@ p.about-text {
 
 .about-home-text::after {
   position: absolute;
+  font-weight: 600;
   content: "\f10e";
   font-family: "Font Awesome 5 free";
   bottom: 0;
