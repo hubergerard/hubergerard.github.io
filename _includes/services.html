@@ -1,11 +1,36 @@
-<section class="service-area grey-bg pb-70 pt-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12 text-center mb-40">
-                <div class="section-title service-title">
-                    <h2>Formations à la une</h2>
-                    <p>Prêt à propulser votre carrière de développeur Angular vers de nouveaux sommets ?</p>
-                </div>
+<section class="service-area pb-70 pt-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 text-center mb-40">
+        <div class="section-title service-title">
+          <h2>Formations à la une</h2>
+          <p>
+            Prêt à propulser votre carrière de développeur Angular vers de
+            nouveaux sommets ?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% assign formations = site.data.online_formation.formations %} {% for
+      formation in formations %} {% if formation.hidden == false %}
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+        <div class="services-box">
+          <a target="_blank" href="{{formation.link}}">
+            <div
+              class="services-img"
+              style="background-image: url('{{ formation.imgUrl }}');"
+            >
+              {% if formation.tag %}
+              <span id="tag-dis" class="badge rounded-pill tag-service"
+                >{{ formation.tag }}</span
+              >
+              {% endif %}
+            </div>
+          </a>
+          <div class="services-content">
+            <div class="card-title">
+              <h5>{{formation.displayName}}</h5>
             </div>
             <div class="card-text">
               <p>{{formation.description}}</p>
