@@ -1,93 +1,128 @@
 <footer class="footer-section">
+  <div class="container">
+    <div class="footer-cta pt-80 pb-20 text-center">
+      <div class="row">
+        <div class="col-xl-4 col-md-4 mb-30">
+          <div class="single-cta">
+            <div class="cta-text">
+              <span
+                ><img
+                  src="/assets/img/bandeaux/rencontrez-nous.png"
+                  alt="adresse codewise"
+                  class="mh-80-px"
+              /></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-30">
+          <div class="single-cta">
+            <div class="cta-text">
+              <span
+                ><img
+                  src="/assets/img/bandeaux/appelez-nous.jpg"
+                  alt="numero telephone codewise"
+                  class="mh-80-px"
+              /></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-30">
+          <div class="single-cta">
+            <div class="cta-text">
+              <span
+                ><img
+                  src="/assets/img/bandeaux/ecrivez-nous.webp"
+                  alt="adresse email codewise"
+                  class="mh-80-px"
+              /></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-content pt-50 pb-30">
+      <div class="footer-pattern">
+        <img
+          src="{{site.baseurl}}/assets/img/footer/logo_W_gris.png"
+          alt="Codewise - World map"
+        />
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 mb-50">
+          <div class="footer-widget">
+            <div class="footer-logo">
+              <a href="{{site.url}}"
+                ><img
+                  src="{{site.baseurl}}/assets/img/logo/footer_logo.webp"
+                  class="img-fluid"
+                  alt="{{site.title}}"
+              /></a>
+            </div>
+            <div class="footer-text">
+              <p>
+                Boostez votre carrière avec Angular. Construisons votre parcours
+                ensemble !
+              </p>
+            </div>
+            <div class="footer-social-icon">
+              <span>Suivez-nous</span>
+              <a href="{{site.linkedin_url}}" target="_blank" rel="noopener"
+                ><i class="fab fa-linkedin linkedin-bg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Liens utiles</h3>
+            </div>
+            <ul>
+              <li><a href="/pages/about">Qui sommes-nous ?</a></li>
+              <li><a href="/pages/services">Formations</a></li>
+              <li><a href="/pages/contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Nous vous recontactons !</h3>
+            </div>
+            <div class="footer-text mb-25">
+              <p>
+                Inscrivez votre adresse email dans ce formulaire, pour recevoir
+                un contact de l'un de nos conseillers en formation ! (Réponse
+                sous 24h)
+              </p>
+            </div>
+            {% include subscribe.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright-area">
     <div class="container">
-        <div class="footer-cta pt-80 pb-20 text-center">
-            <div class="row">
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">                  
-                        <div class="cta-text">
-                            <span><img src="/assets/img/bandeaux/rencontrez-nous.png" alt="adresse codewise" class="mh-80-px"></span>      
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">                       
-                        <div class="cta-text">
-                            <span><img src="/assets/img/bandeaux/appelez-nous.jpg" alt="numero telephone codewise" class="mh-80-px"></span> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">                       
-                        <div class="cta-text">
-                            <span><img src="/assets/img/bandeaux/ecrivez-nous.webp" alt="adresse email codewise" class="mh-80-px"></span> 
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+          <div class="copyright-text">
+            <p>
+              Copyright &copy; 2023, Tous droits réservés
+              <a href="{{site.url}}">Codewise</a>
+            </p>
+          </div>
         </div>
-        <div class="footer-content pt-50 pb-30">
-            <div class="footer-pattern">
-                <img src="{{site.baseurl}}/assets/img/footer/footer_map.webp" alt="Codewise - World map">
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 mb-50">
-                    <div class="footer-widget">
-                        <div class="footer-logo">
-                            <a href="{{site.url}}"><img src="{{site.baseurl}}/assets/img/logo/footer_logo.webp" class="img-fluid" alt="{{site.title}}"></a>
-                        </div>
-                        <div class="footer-text">
-                            <p>Boostez votre carrière avec Angular. Construisons votre parcours ensemble !</p>
-                        </div>
-                        <div class="footer-social-icon">
-                            <span>Suivez-nous</span>
-                            <a href="{{site.linkedin_url}}" target="_blank" rel="noopener"><i class="fab fa-linkedin linkedin-bg"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Liens utiles</h3>
-                        </div>
-                        <ul>
-                            <li><a href="/pages/about">Qui sommes-nous ?</a></li>
-                            <li><a href="/pages/services">Formations</a></li>
-                            <li><a href="/pages/contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Nous vous recontactons !</h3>
-                        </div>
-                        <div class="footer-text mb-25">
-                            <p>Inscrivez votre adresse email dans ce formulaire, pour recevoir un contact de l'un de nos conseillers en formation ! (Réponse sous 24h)</p>
-                        </div>
-                        {% include subscribe.html %}
-                    </div>
-                </div>
-            </div>
+        <div class="col-xl-6 col-lg-6 text-right">
+          <div class="footer-menu text-center">
+            <ul>
+              <li><a href="{{site.url}}">Home</a></li>
+              <li><a href="/pages/mentions-legales">Mentions Légales</a></li>
+              <li><a href="/pages/contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="copyright-text">
-                        <p>Copyright &copy; 2023, Tous droits réservés <a href="{{site.url}}">Codewise</a></p>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 text-right">
-                    <div class="footer-menu text-center">
-                        <ul>
-                            <li><a href="{{site.url}}">Home</a></li>
-                            <li><a href="/pages/mentions-legales">Mentions Légales</a></li>
-                            <li><a href="/pages/contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </footer>
