@@ -56,6 +56,10 @@ body {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 a,
 .button {
   -webkit-transition: all 0.3s ease-out 0s;
@@ -1827,11 +1831,11 @@ p {
 .footer-pattern img {
   position: absolute;
   top: 50px;
-  left: 100px;
+  left: 165px;
   background-size: cover;
   background-position: 100% 100%;
   opacity: 0.2;
-  width: 30%;
+  width: 25%;
 }
 
 .footer-logo {
