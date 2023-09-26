@@ -1,9 +1,7 @@
-linkModalHead = document.getElementById('link-modal-headband');
-linkModalHead.addEventListener('click', openModal);
-linkModalSection = document.getElementById('link-modal-section');
-linkModalSection.addEventListener('click', openModal);
-linkModalSide = document.getElementById('link-modal-side');
-linkModalSide.addEventListener('click', openModal);
+const modalRoadmapLinks = document.getElementsByClassName('modal-roadmap');
+for (const link of modalRoadmapLinks) {
+    link.addEventListener('click', openModal);
+}
 
 function openModal() {
     $('#formModal').modal('toggle');
