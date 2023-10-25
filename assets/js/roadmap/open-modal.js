@@ -1,4 +1,3 @@
-
 function openModal() {
 $('#formModal').modal('toggle');
 }

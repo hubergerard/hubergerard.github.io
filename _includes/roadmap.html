@@ -7,9 +7,9 @@
   }
   svg{
     width: 85%;
-    height: 1500px;
+    height: 1300px;
   }
-  svg#beginner{
+/*   svg#beginner{
     margin-top:-90px;
     margin-bottom: -90px;
   }
@@ -20,7 +20,7 @@
   svg#architect{
     margin-top:-170px;
     margin-bottom: -50px;
-  }
+  } */
   svg *{
     user-select: none;
   }
@@ -96,9 +96,6 @@
     justify-content: center;
     padding: 4px;
   }
-  #buttonScoring{
-
-  }
   #progress-bar{
     width: 80%;
     height: 10px;
@@ -122,6 +119,37 @@
   #explanation p{
     margin-bottom: 10px;
   }
+
+  /* Styles pour les écrans de petite taille */
+  @media screen and (max-width: 576px) {
+      
+  }
+
+  /* Styles pour les écrans de taille moyenne (entre 577px et 992px) */
+  @media screen and (min-width: 577px) and (max-width: 992px) {
+      
+  }
+
+  /* Styles pour les écrans de grande taille (entre 993px et 1200px) */
+  @media screen and (min-width: 993px) and (max-width: 1200px) {
+      
+  }
+
+  /* Styles pour les écrans extra-larges */
+  @media screen and (min-width: 1201px) {
+    svg#beginner{
+    margin-top:0;
+    margin-bottom:-30px;
+  }
+  svg#advanced{
+    margin-top:-100px;
+    margin-bottom:-50px;
+  }
+  svg#architect{
+    margin-top:-100px;
+    margin-bottom: -50px;
+  }
+}
 </style>
 <div id="barScoring">
   <button id="buttonScoring" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalScoring">
