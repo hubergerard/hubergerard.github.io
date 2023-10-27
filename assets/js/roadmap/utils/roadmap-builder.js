@@ -142,166 +142,166 @@ export class RoadmapBuilder {
     const trees = [];
 
     // RoutingAdvanced
-    const guardsNode = RoadmapBuilder.#createNode("Tracé_109-21ad", [
-      "Guards-2",
+    const guardsNode = RoadmapBuilder.#createNode("Tracé_109-20ad", [
+      "Guards",
     ]);
-    const lazyLoadingNode = RoadmapBuilder.#createNode("Tracé_109-22ad", [
-      "Lazy_Loading-2",
+    const lazyLoadingNode = RoadmapBuilder.#createNode("Tracé_109-14ad", [
+      "Lazy_Loading",
     ]);
-    const resolversNode = RoadmapBuilder.#createNode("Tracé_109-23ad", [
-      "Resolvers-2",
+    const resolversNode = RoadmapBuilder.#createNode("Tracé_109-15ad", [
+      "Resolvers",
     ]);
     const routingAdvancedNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-10ad",
-      ["Routing-2ad"],
+      "Rectangle_1-6ad",
+      ["Routing"],
       [guardsNode, lazyLoadingNode, resolversNode]
     );
     trees.push(routingAdvancedNode);
 
     // State management
-    const ngxsNode = RoadmapBuilder.#createNode("Tracé_109-24ad", ["Ngxs"]);
-    const ngrxNode = RoadmapBuilder.#createNode("Tracé_109-25ad", ["Ngrx"]);
+    const ngxsNode = RoadmapBuilder.#createNode("Tracé_109-16ad", ["Ngxs"]);
+    const ngrxNode = RoadmapBuilder.#createNode("Tracé_109-17ad", ["Ngrx"]);
     const statedNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-11ad",
-      ["State_management-2"],
+      "Rectangle_1-7ad",
+      ["State_management"],
       [ngxsNode, ngrxNode]
     );
     trees.push(statedNode);
 
     // ChangeDetection
     const changeDetectionStrategyNode = RoadmapBuilder.#createNode(
-      "Tracé_109-37ad",
-      ["ChangeDetectionStrategy-4"]
+      "Tracé_109-18ad",
+      ["ChangeDetectionStrategy-2"]
     );
-    const zonesgNode = RoadmapBuilder.#createNode("Tracé_109-38ad", [
-      "Zones-4",
+    const zonesgNode = RoadmapBuilder.#createNode("Tracé_109-19ad", [
+      "Zones-2",
     ]);
     const changeDetectionNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-12ad",
-      ["Change_2", "detection-2"],
+      "Rectangle_1-8ad",
+      ["Change_", "detection"],
       [zonesgNode, changeDetectionStrategyNode]
     );
     trees.push(changeDetectionNode);
 
     // Custom directive & pipe
     const customeDirectivePipeNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-13ad",
-      ["Créer_des_custom_", "directives_pipes"]
+      "Rectangle_1-9ad",
+      ["Custom_", "directive_pipe"]
     );
     trees.push(customeDirectivePipeNode);
 
     // Optimisation rendering
     const serverSideRenderingNode = RoadmapBuilder.#createNode(
-      "Tracé_109-27ad",
-      ["Server_Side_2", "Rendering-4"]
+      "Tracé_109-6ad",
+      ["Server_Side_", "Rendering-2"]
     );
     const staticSitegenerationNode = RoadmapBuilder.#createNode(
-      "Tracé_109-28ad",
-      ["Static_Site_2", "Generation-2"]
+      "Tracé_109-7ad",
+      ["Static_Site_", "Generation"]
     );
     const optimisationRenderingNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-14ad",
-      ["Optimisation_du_2", "rendering-3"],
+      "Rectangle_1-3ad",
+      ["Optimisation_du_", "rendering"],
       [serverSideRenderingNode, staticSitegenerationNode]
     );
     trees.push(optimisationRenderingNode);
 
     // PWA
-    const serviceWorkersNode = RoadmapBuilder.#createNode("Tracé_109-26ad", [
-      "Service_2",
-      "workers-2",
+    const serviceWorkersNode = RoadmapBuilder.#createNode("Tracé_109ad", [
+      "Service_",
+      "workers",
     ]);
-    const appShellNode = RoadmapBuilder.#createNode("Tracé_109-40ad", [
-      "App_shell-2",
+    const appShellNode = RoadmapBuilder.#createNode("Tracé_109-5ad", [
+      "App_shell",
     ]);
     const pwaNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-15ad",
-      ["PWA-2"],
+      "Rectangle_1ad",
+      ["PWA"],
       [serviceWorkersNode, appShellNode]
     );
     trees.push(pwaNode);
 
     // i18n
-    const pipeI18nPluralNode = RoadmapBuilder.#createNode("Tracé_109-39ad", [
-      "Pipe_4",
-      "i18nPlural-2",
+    const pipeI18nPluralNode = RoadmapBuilder.#createNode("Tracé_109-4ad", [
+      "pipe_2",
+      "i18nPlural",
     ]);
     const pipeI18nSelectsNode = RoadmapBuilder.#createNode(
-      "Tracé_109-30ad",
-      ["Pipe_3", "i18nSelect-2"],
+      "Tracé_109-3ad",
+      ["pipe_", "i18nSelect"],
       [pipeI18nPluralNode]
     );
-    const ngxTranslateNode = RoadmapBuilder.#createNode("Tracé_109-29ad", [
-      "ngx-translate-2",
+    const ngxTranslateNode = RoadmapBuilder.#createNode("Tracé_109-2ad", [
+      "ngx-translate",
     ]);
     const i18nNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-16ad",
-      ["i18n-2"],
-      [pipeI18nSelectsNode, ngxTranslateNode]
+      "Rectangle_1-2ad",
+      ["i18n"],
+      [pipeI18nSelectsNode, ngxTranslateNode, pipeI18nPluralNode]
     );
     trees.push(i18nNode);
 
     // Gestion asynchrome
-    const observablesNode = RoadmapBuilder.#createNode("Rectangle_2-16ad", [
-      "Operators-6",
+    const observablesNode = RoadmapBuilder.#createNode("Rectangle_2-3ad", [
+      "Operators-3",
     ]);
-    const subjectsNode = RoadmapBuilder.#createNode("Rectangle_2-15ad", [
-      "Operators-5",
+    const subjectsNode = RoadmapBuilder.#createNode("Rectangle_2-2ad", [
+      "Operators-2",
     ]);
-    const operatorsNode = RoadmapBuilder.#createNode("Rectangle_2-9ad", [
-      "Operators-4",
+    const operatorsNode = RoadmapBuilder.#createNode("Rectangle_2ad", [
+      "Operators",
     ]);
-    const effectsNode = RoadmapBuilder.#createNode("Rectangle_2-10ad", [
-      "Effects-2",
+    const effectsNode = RoadmapBuilder.#createNode("Rectangle_2-4ad", [
+      "Effects",
     ]);
-    const computedSignalsNode = RoadmapBuilder.#createNode("Rectangle_2-11ad", [
-      "Computed_2",
-      "Signals-5",
+    const computedSignalsNode = RoadmapBuilder.#createNode("Rectangle_2-5ad", [
+      "Computed_",
+      "Signals-2",
     ]);
-    const writibleSignalsNode = RoadmapBuilder.#createNode("Rectangle_2-12ad", [
-      "Writible_2",
-      "Signals-6",
+    const writibleSignalsNode = RoadmapBuilder.#createNode("Rectangle_2-6ad", [
+      "Writible_",
+      "Signals-3",
     ]);
     const signalsNode = RoadmapBuilder.#createNode(
-      "Tracé_109-32ad",
-      ["Signals-4"],
+      "Tracé_109-9ad",
+      ["Signals"],
       [effectsNode, computedSignalsNode, writibleSignalsNode]
     );
     const rxJsNode = RoadmapBuilder.#createNode(
-      "Tracé_109-31ad",
-      ["RxJs-2"],
+      "Tracé_109-8ad",
+      ["RxJs"],
       [operatorsNode, observablesNode, subjectsNode]
     );
     const gestionAsynchroneNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-17ad",
-      ["Gestion_2", "asynchrone-2"],
+      "Rectangle_1-4ad",
+      ["Gestion_", "asynchrone"],
       [rxJsNode, signalsNode]
     );
     trees.push(gestionAsynchroneNode);
 
     // Angular Material
-    const layoutNode = RoadmapBuilder.#createNode("Rectangle_2-13ad", [
-      "Layout-2",
+    const layoutNode = RoadmapBuilder.#createNode("Rectangle_2-7ad", [
+      "Layout",
     ]);
     const breakpointObserverNode = RoadmapBuilder.#createNode(
-      "Rectangle_2-14ad",
-      ["Breakpoint_2", "Observer-2"]
+      "Rectangle_2-8ad",
+      ["Breakpoint_", "Observer"]
     );
-    const cdkNode = RoadmapBuilder.#createNode("Tracé_109-33ad", ["CDK-2"]);
+    const cdkNode = RoadmapBuilder.#createNode("Tracé_109-10ad", ["CDK"]);
     const responsiveDesignNode = RoadmapBuilder.#createNode(
-      "Tracé_109-34ad",
-      ["Responsive_2", "Design-2"],
+      "Tracé_109-11ad",
+      ["Responsive_", "Design"],
       [layoutNode, breakpointObserverNode]
     );
-    const themesNode = RoadmapBuilder.#createNode("Tracé_109-35ad", [
-      "Themes-2",
+    const themesNode = RoadmapBuilder.#createNode("Tracé_109-12ad", [
+      "Themes",
     ]);
-    const schematicsNode = RoadmapBuilder.#createNode("Tracé_109-36ad", [
-      "Schematics-2",
+    const schematicsNode = RoadmapBuilder.#createNode("Tracé_109-13ad", [
+      "Schematics",
     ]);
     const angularMaterialNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-18ad",
-      ["Angular_2", "Material-2"],
+      "Rectangle_1-5ad",
+      ["Angular_", "Material"],
       [cdkNode, responsiveDesignNode, themesNode, schematicsNode]
     );
     trees.push(angularMaterialNode);
@@ -313,19 +313,19 @@ export class RoadmapBuilder {
     const trees = [];
 
     // Notions générales d'architecture
-    const fonctionsPureNode = RoadmapBuilder.#createNode("Tracé_109-3ac", [
+    const fonctionsPureNode = RoadmapBuilder.#createNode("Tracé_109-3ar", [
       "Fonctions_",
       "pures",
     ]);
-    const immuabiliteNode = RoadmapBuilder.#createNode("Tracé_109-4ac", [
+    const immuabiliteNode = RoadmapBuilder.#createNode("Tracé_109-4ar", [
       "Immuabilité",
     ]);
     const dependencyInjectionNode = RoadmapBuilder.#createNode(
-      "Tracé_109-5ac",
+      "Tracé_109-5ar",
       ["Dependency_", "injection"]
     );
     const notionsGeneraleArchitectureNode = RoadmapBuilder.#createNode(
-      "Rectangle_1ac",
+      "Rectangle_1ar",
       ["Notions_générales_", "d_architecture"],
       [dependencyInjectionNode, immuabiliteNode, fonctionsPureNode]
     );
@@ -333,16 +333,16 @@ export class RoadmapBuilder {
 
     // Programmation fonctionnelle
 
-    const patternObserverNode = RoadmapBuilder.#createNode("Tracé_109ac", [
+    const patternObserverNode = RoadmapBuilder.#createNode("Tracé_109ar", [
       "Pattern_",
       "Observer",
     ]);
-    const compositionFluxNode = RoadmapBuilder.#createNode("Tracé_109-2ac", [
+    const compositionFluxNode = RoadmapBuilder.#createNode("Tracé_109-2ar", [
       "Composition_",
       "des_flux",
     ]);
     const programmationFonctionnelleNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-2ac",
+      "Rectangle_1-2ar",
       ["Programmation_", "fonctionnelle"],
       [patternObserverNode, compositionFluxNode]
     );
@@ -351,7 +351,7 @@ export class RoadmapBuilder {
      // Smart vs Dumb component
 
     const smartVsDumbNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-3ac",
+      "Rectangle_1-3ar",
       ["Smart_Vs_Dumb_", "component"],
       []
     );
@@ -359,20 +359,20 @@ export class RoadmapBuilder {
 
       // Gestion des modules
 
-    const standAloneComponentNode = RoadmapBuilder.#createNode("Tracé_109-10ac", [
+    const standAloneComponentNode = RoadmapBuilder.#createNode("Tracé_109-10ar", [
       "Standalone_",
       "component-2",
     ]);
-    const singleComponentNode = RoadmapBuilder.#createNode("Tracé_109-9ac", [
+    const singleComponentNode = RoadmapBuilder.#createNode("Tracé_109-9ar", [
       "Single_Component_",
       "Angular_Module",
     ]);
-    const featureShareModuleNode = RoadmapBuilder.#createNode("Tracé_109-8ac", [
+    const featureShareModuleNode = RoadmapBuilder.#createNode("Tracé_109-8ar", [
       "Feature_Modules_",
       "SharedModule",
     ]);
     const gestionModulesNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-4ac",
+      "Rectangle_1-4ar",
       ["Gestion_des_", "modules"],
       [featureShareModuleNode, singleComponentNode, standAloneComponentNode]
     );
@@ -381,7 +381,7 @@ export class RoadmapBuilder {
     // Découpage en features
 
     const decoupageFeaturesNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-5ac",
+      "Rectangle_1-5ar",
       ["Découpage_en_", "features"],
       []
     );
@@ -390,7 +390,7 @@ export class RoadmapBuilder {
     // Routing shell
 
     const routingShellNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-6ac",
+      "Rectangle_1-6ar",
       ["Routing_shell"],
       []
     );
@@ -399,7 +399,7 @@ export class RoadmapBuilder {
      // Responsabilité service composant
 
     const responsabiliteServiceComposantNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-7ac",
+      "Rectangle_1-7ar",
       ["Responsabilité_", "Service_Composant"],
       []
     );
@@ -407,20 +407,20 @@ export class RoadmapBuilder {
 
     // Les 3 couches de données
 
-    const stateNode = RoadmapBuilder.#createNode("Tracé_109-6ac", [
+    const stateNode = RoadmapBuilder.#createNode("Tracé_109-6ar", [
       "Couche_",
       "state",
     ]);
-    const businessNode = RoadmapBuilder.#createNode("Tracé_109-7ac", [
+    const businessNode = RoadmapBuilder.#createNode("Tracé_109-7ar", [
       "Couche_2",
       "business",
     ]);
-    const viewModelNode = RoadmapBuilder.#createNode("Tracé_109-11ac", [
+    const viewModelNode = RoadmapBuilder.#createNode("Tracé_109-11ar", [
       "Couche_3",
       "view_Model",
     ]);
     const coucheDonneesNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-8ac",
+      "Rectangle_1-8ar",
       ["Les_3_couches_", "de_données"],
       [viewModelNode, businessNode, stateNode]
     );
@@ -428,26 +428,26 @@ export class RoadmapBuilder {
 
       // Notions avancées
 
-    const migrationNode = RoadmapBuilder.#createNode("Tracé_109-12ac", [
+    const migrationNode = RoadmapBuilder.#createNode("Tracé_109-12ar", [
       "Migration_par_",
       "itération",
     ]);
-    const routerStateNode = RoadmapBuilder.#createNode("Tracé_109-13ac", [
+    const routerStateNode = RoadmapBuilder.#createNode("Tracé_109-13ar", [
       "Router_state_et_",
       "Formstate_avec_",
       "Ngxs",
     ]);
-    const reactiveNode = RoadmapBuilder.#createNode("Tracé_109-14ac", [
+    const reactiveNode = RoadmapBuilder.#createNode("Tracé_109-14ar", [
       "Programmation_2",
       "réactive_:_Réifiée_et_",
       "transparente"
     ]);
-    const ngxsVsNgrxNode = RoadmapBuilder.#createNode("Tracé_109-15ac", [
+    const ngxsVsNgrxNode = RoadmapBuilder.#createNode("Tracé_109-15ar", [
       "Comparer_Ngxs_",
       "et_Ngrx",
     ]);
     const notionsAvanceesNode = RoadmapBuilder.#createNode(
-      "Rectangle_1-9ac",
+      "Rectangle_1-9ar",
       ["Notions_", "avancées"],
       [migrationNode, routerStateNode, reactiveNode, ngxsVsNgrxNode]
     );
