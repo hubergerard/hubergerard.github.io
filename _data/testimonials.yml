@@ -1,0 +1,37 @@
+testimonials:
+  - name: "Kevin Radlowski"
+    photoUrl: "/assets/img/testimonials/kevin_radlowski.jpeg"
+    linkedinUrl: "https://www.linkedin.com/in/kevin-radlowski/"
+    description: "Je suis reconnaissant envers Huber pour cette opportunité d’apprentissage enrichissante qui a eu un impact significatif sur ma carrière, et je recommande vivement cette formation à tous ceux qui cherchent à développer leurs compétences."
+    title: "Formation enrichissante et formateur compétent"
+    rating: 5
+  - name: "Boumedienne Messadia"
+    photoUrl: "/assets/img/testimonials/boumedienne_messadia.jpeg"
+    linkedinUrl: "https://www.linkedin.com/in/boumedienne-messadia-6a92551a0/"
+    description: "J’ai suivi une formation en spécialisation sur Angular pendant 3 semaines et j’ai trouvé cette expérience très intéressante et enrichissante."
+    title: "Un Voyage Éclair dans l’Univers Angular"
+    rating: 4
+  - name: "Laurent Saez"
+    photoUrl: "/assets/img/testimonials/laurent_saez.jpeg"
+    linkedinUrl: "https://www.linkedin.com/in/laurent-saez/"
+    description: "Très intéressant, il aurait fallu plus de temps mais on en avait pas. Le formateur a pris le temps de tout expliquer malgré le timing."
+    title: "Super initiation Angular"
+    rating: 5
+  - name: "Frédéric Margerit"
+    photoUrl: "/assets/img/testimonials/frederic_margerit.jpeg"
+    linkedinUrl: "https://www.linkedin.com/in/mrgfrederic/"
+    description: "En tant que formateur, Huber excelle. Sa passion pour le développement web et sa pédagogie naturelle en font un enseignant hors pair. Il sait transmettre ses connaissances avec clarté et patience, adaptant son style d’enseignement aux besoins de chaque apprenant."
+    title: "Bonjour à la pédagogie"
+    rating: 5
+  - name: "Nicolas Billon"
+    photoUrl: "/assets/img/testimonials/nicolas_billon.jpeg"
+    linkedinUrl: "https://www.linkedin.com/in/nicolas-billon-322788173/"
+    description: "Très bonne formation, c’était court (une semaine) mais très interessant et instructif. Formateur très à l’écoute et on ressent la passion du code dans ces cours."
+    title: "Formation courte Angular, première approche."
+    rating: 5
+  - name: "Ioannis Nikas "
+    photoUrl: "/assets/img/testimonials/ioannis_nikas.jpeg"
+    linkedinUrl: "https://www.linkedin.com/in/ioannis-nikas-5773b318/"
+    description: "Les activités variées et très axées sur la pratique permettent d’apprendre petit à petit les subtilités du framework Angular tout en approfondissant ses connaissances typescript."
+    title: "Votez Hubert"
+    rating: 4

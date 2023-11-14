@@ -1,26 +1,31 @@
-<section class="testimonial-area pt-100 pb-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="testimonial-active owl-carousel">
-                    <div class="single-item testimonial-items text-center">
-                        <div class="client-text">
-                            La technologie c’est comme le poisson. Plus ça reste en rayon, moins c’est appétissant.
-                        </div>
-                        <img src="{{site.baseurl}}/assets/img/testimonial/01.jpg" class="img-fluid" alt="">
-                        <h4>Andrew Heller</h4>
-                        <span>CEO</span>
-                    </div>
-                    <div class="single-item testimonial-items text-center">
-                        <div class="client-text">
-                            La technologie peut être utilisée pour le meilleur ou le pire. Elle a transformé notre manière de vivre.
-                        </div>
-                        <img src="{{site.baseurl}}/assets/img/testimonial/02.jpg" class="img-fluid" alt="">
-                        <h4>Hugh Montefiore</h4>
-                        <span>Théologien</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="testimonial-area pt-80 pb-40">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-xl-12 section-title service-title">
+        <h2 class="mb-60">Qu'en disent nos élèves ?</h2>
+        <div class="testimonial-active owl-carousel">
+          {% assign testimonials = site.data.testimonials %} 
+          {% for testimonial in testimonials.testimonials %}
+          <div class="single-item testimonial-items text-center">
+            <p>
+              {% assign number = testimonial.rating | integer %}
+              {% for i in (1..number) %}
+              ⭐
+              {% endfor %}
+              - 
+              {{ testimonial.title }}
+            </p>
+            <div class="client-text">{{ testimonial.description }}</div>
+            <img
+              class="testimonial-img"
+              src="{{testimonial.photoUrl}}"
+              class="img-fluid"
+              alt=""
+            />
+            <h4>{{testimonial.name}} <a href="{{testimonial.linkedinUrl}}" target="_blank"><i class="fab fa-linkedin testimonial-linkedin-icon"></i></a> </h4>
+          </div>
+          {% endfor %}
+      </div>
     </div>
+  </div>
 </section>
