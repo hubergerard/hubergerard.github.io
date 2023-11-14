@@ -275,11 +275,12 @@ blockquote {
 	width: 100%;
 }
 
-
-
-
+.footer-pattern img {
+	left: 0px;
+}
 
 }
+
 /* SM Small Device :550px. */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 
@@ -313,11 +314,5 @@ blockquote {
 .comments-reply {
 	padding-left: 130px;
 }
-
-
-
-
-
-
 
 }
