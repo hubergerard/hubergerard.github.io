@@ -1129,6 +1129,15 @@ p.about-text {
   color: #1f7ed8;
 }
 
+@media screen and (max-width: 860px) {
+  .about-block-responsive{
+    width: 100%;
+  }
+  .pb-100{padding-bottom: 0px};
+}
+
+
+
 /* 5. Service */
 
 .services-box {
